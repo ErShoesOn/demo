@@ -183,6 +183,7 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
   const fieldId = (name: string) => `${uid}-${name}`;
   const errorId = (name: string) => `${uid}-${name}-error`;
   const errors = state.fieldErrors ?? {};
+  const saved = state.values;
 
   if (state.status === "success" || state.status === "handoff") {
     return (
@@ -194,7 +195,11 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
 
   return (
     <div id="inquiry">
-      <form action={formAction} className="space-y-6">
+      <form
+        action={formAction}
+        className="space-y-6"
+        key={saved ? JSON.stringify(saved) : "initial"}
+      >
         <div aria-live="polite" className="sr-only">
           {state.message}
         </div>
@@ -230,6 +235,7 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
               minLength={2}
               maxLength={80}
               autoComplete="name"
+              defaultValue={saved?.name ?? ""}
               className={inputClass}
               aria-invalid={Boolean(errors.name)}
               aria-describedby={errors.name ? errorId("name") : undefined}
@@ -250,6 +256,7 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
               maxLength={30}
               autoComplete="tel"
               placeholder="+977 …"
+              defaultValue={saved?.phone ?? ""}
               className={inputClass}
               aria-invalid={Boolean(errors.phone)}
               aria-describedby={errors.phone ? errorId("phone") : undefined}
@@ -267,6 +274,7 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
               type="email"
               maxLength={120}
               autoComplete="email"
+              defaultValue={saved?.email ?? ""}
               className={inputClass}
               aria-invalid={Boolean(errors.email)}
               aria-describedby={errorId("email")}
@@ -284,7 +292,7 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
               id={fieldId("service")}
               name="service"
               required
-              defaultValue=""
+              defaultValue={saved?.service ?? ""}
               className={inputClass}
               aria-invalid={Boolean(errors.service)}
               aria-describedby={errors.service ? errorId("service") : undefined}
@@ -310,6 +318,7 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
               name="travelDate"
               type="date"
               required
+              defaultValue={saved?.travelDate ?? ""}
               className={inputClass}
               aria-invalid={Boolean(errors.travelDate)}
               aria-describedby={
@@ -333,7 +342,7 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
               required
               min={1}
               max={50}
-              defaultValue={1}
+              defaultValue={saved?.passengers || 1}
               inputMode="numeric"
               className={inputClass}
               aria-invalid={Boolean(errors.passengers)}
@@ -359,6 +368,7 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
               minLength={2}
               maxLength={120}
               placeholder="Hotel, home, airport or city"
+              defaultValue={saved?.pickup ?? ""}
               className={inputClass}
               aria-invalid={Boolean(errors.pickup)}
               aria-describedby={errors.pickup ? errorId("pickup") : undefined}
@@ -378,6 +388,7 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
               minLength={2}
               maxLength={120}
               placeholder="City, hotel or region"
+              defaultValue={saved?.destination ?? ""}
               className={inputClass}
               aria-invalid={Boolean(errors.destination)}
               aria-describedby={
@@ -399,6 +410,7 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
               id={fieldId("pickupTime")}
               name="pickupTime"
               type="time"
+              defaultValue={saved?.pickupTime ?? ""}
               className={inputClass}
             />
           </div>
@@ -411,7 +423,7 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
             <select
               id={fieldId("vehicle")}
               name="vehicle"
-              defaultValue=""
+              defaultValue={saved?.vehicle ?? ""}
               className={inputClass}
             >
               <option value="">No preference</option>
@@ -433,6 +445,7 @@ export function InquiryForm({ serviceOptions, vehicleOptions }: InquiryFormProps
               name="message"
               maxLength={2000}
               rows={5}
+              defaultValue={saved?.message ?? ""}
               placeholder="Luggage count, child seat, accessibility needs, flight number, planned stops, return journey…"
               className={textareaClass}
             />

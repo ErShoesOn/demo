@@ -20,6 +20,8 @@ export type InquiryState = {
   /** Plain-text summary shown when automatic delivery is unavailable. */
   summary?: string;
   fieldErrors?: Partial<Record<InquiryFieldName, string>>;
+  /** Echoed back on validation errors so the form can be repopulated. */
+  values?: InquiryValues;
 };
 
 export type InquiryValues = {

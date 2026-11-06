@@ -163,6 +163,7 @@ export async function submitInquiry(
       status: "error",
       message: "Please check the highlighted fields and send the inquiry again.",
       fieldErrors,
+      values,
     };
   }
 
