@@ -76,7 +76,7 @@ export function localBusinessSchema() {
     legalName: siteConfig.legalName,
     url: siteConfig.url,
     description: siteConfig.description,
-    image: `${siteConfig.url}/images/logo.png`,
+    image: `${siteConfig.url}/images/logo.svg`,
     telephone: siteConfig.contact.phone || undefined,
     email: siteConfig.contact.email || undefined,
     address: siteConfig.contact.address
