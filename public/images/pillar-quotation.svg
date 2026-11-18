@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f8fafc"/>
+  <!-- Document -->
+  <path d="M 260 200 L 260 460 Q 260 480 280 480 L 540 480 Q 560 480 560 460 L 560 200 Q 560 180 540 180 L 300 180 Q 280 180 280 200 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <path d="M 260 180 L 540 180 Q 560 160 540 140 L 300 140 Q 280 120 260 140 Z" fill="#c9a227"/>
+  <!-- Lines on document -->
+  <path d="M 300 240 L 460 240" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 300 270 L 440 270" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 300 300 L 420 300" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 300 330 L 380 330" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 300 360 L 440 360" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 300 390 L 400 390" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="540" font-family="Arial, sans-serif" font-size="24" fill="#0a1422" text-anchor="middle">Written Quotation</text>
+  <text x="400" y="570" font-family="Arial, sans-serif" font-size="16" fill="#64748b" text-anchor="middle">Clear pricing with no hidden charges</text>
+</svg>

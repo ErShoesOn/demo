@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f8fafc"/>
+  <!-- Car silhouette -->
+  <path d="M 200 400 Q 180 360 220 360 L 260 360 Q 300 360 320 380 L 380 380 Q 420 360 460 360 L 540 360 Q 580 340 600 360 L 620 380 Q 640 400 640 420 L 600 420 Q 560 420 540 400 L 260 400 Q 220 420 200 400 Z" fill="#0a1422"/>
+  <circle cx="280" cy="440" r="20" fill="#e2e8f0"/>
+  <circle cx="520" cy="440" r="20" fill="#e2e8f0"/>
+  <!-- Chauffeur -->
+  <path d="M 340 320 Q 340 280 360 260 L 400 260 Q 440 260 440 300 L 440 340 Q 440 380 400 380 L 340 380 Z" fill="#c9a227"/>
+  <circle cx="380" cy="270" r="15" fill="#0a1422"/>
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="24" fill="#0a1422" text-anchor="middle">Chauffeur-Driven Service</text>
+  <text x="400" y="580" font-family="Arial, sans-serif" font-size="16" fill="#64748b" text-anchor="middle">Professional driver for your journey</text>
+</svg>

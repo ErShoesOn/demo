@@ -40,24 +40,24 @@ export const metadata: Metadata = pageMetadata({
 
 const pillars = [
   {
-    image: "https://images.unsplash.com/photo-1529273676803-412f248c8a2a?q=80&w=400&auto=format&fit=crop",
-    imageAlt: "Professional professionally driving a luxury car through Kathmandu streets, Nepal",
-    imageCaption: "professionally-driven car service in Kathmandu, Nepal. Photo: Unsplash.",
-    title: "professionally-driven only",
+    image: "/images/pillar-chauffeur.svg",
+    imageAlt: "Professional chauffeur driving a luxury car through Kathmandu streets, Nepal",
+    imageCaption: "Chauffeur-driven car service in Kathmandu, Nepal.",
+    title: "Chauffeur-Driven Only",
     text: "Every vehicle is arranged with a driver. We do not offer self-drive rentals.",
   },
   {
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=400&auto=format&fit=crop",
+    image: "/images/pillar-quotation.svg",
     imageAlt: "Written quotation document with pen on desk, professional car rental paperwork",
-    imageCaption: "Written quotation with clear terms. Photo: Unsplash.",
-    title: "A written quotation",
+    imageCaption: "Written quotation with clear terms.",
+    title: "A Written Quotation",
     text: "You receive the route, vehicle category, inclusions and price before anything is confirmed.",
   },
   {
-    image: "https://images.unsplash.com/photo-1469843592276-4b02ed61dd4e?q=80&w=400&auto=format&fit=crop",
+    image: "/images/pillar-kathmandu.svg",
     imageAlt: "Kathmandu valley landscape with mountains and temples, Nepal travel destination",
-    imageCaption: "Kathmandu and beyond — intercity travel across Nepal. Photo: Unsplash.",
-    title: "Kathmandu and beyond",
+    imageCaption: "Kathmandu and beyond — intercity travel across Nepal.",
+    title: "Kathmandu and Beyond",
     text: "City travel, airport transfers and selected intercity journeys across Nepal on request.",
   },
 ];
