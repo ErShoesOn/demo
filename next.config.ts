@@ -69,16 +69,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.majesticrentals.com.np" }],
-        destination: "https://majesticrentals.com.np/:path*",
-        permanent: true,
-      },
-    ];
-  },
 };
 
 export default nextConfig;
