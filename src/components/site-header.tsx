@@ -89,7 +89,7 @@ export function SiteHeader() {
             aria-label="Majestic Rentals — home"
           >
             <Image
-              src="/images/logo.svg"
+              src="/images/logo.png"
               alt="Majestic Rentals — premium chauffeur-driven car rentals in Nepal"
               width={120}
               height={38}
