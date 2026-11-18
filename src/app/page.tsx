@@ -32,7 +32,7 @@ import {
 } from "@/lib/schema";import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Majestic Rentals | Chauffeur-Driven Car Rentals in Nepal",
+  title: "Majestic Rentals | professionally-Driven Car Rentals in Nepal",
   description: siteConfig.description,
   path: "/",
   absoluteTitle: true,
@@ -41,9 +41,9 @@ export const metadata: Metadata = pageMetadata({
 const pillars = [
   {
     image: "https://images.unsplash.com/photo-1529273676803-412f248c8a2a?q=80&w=400&auto=format&fit=crop",
-    imageAlt: "Professional chauffeur driving a luxury car through Kathmandu streets, Nepal",
-    imageCaption: "Chauffeur-driven car service in Kathmandu, Nepal. Photo: Unsplash.",
-    title: "Chauffeur-driven only",
+    imageAlt: "Professional professionally driving a luxury car through Kathmandu streets, Nepal",
+    imageCaption: "professionally-driven car service in Kathmandu, Nepal. Photo: Unsplash.",
+    title: "professionally-driven only",
     text: "Every vehicle is arranged with a driver. We do not offer self-drive rentals.",
   },
   {
@@ -124,7 +124,7 @@ export default function HomePage() {
               Kathmandu · Nationwide Nepal on request
             </p>
             <h1 className="mt-6 text-balance text-4xl font-extrabold leading-[1.04] tracking-[-0.045em] sm:text-5xl lg:text-6xl">
-              Premium car rental in Nepal, with a professional chauffeur.
+              Premium car rental in Nepal, with a professional professionally.
             </h1>
             <p className="mt-6 max-w-2xl text-pretty text-base leading-7 text-navy-100/85 sm:text-lg sm:leading-8">
               Private vehicles for airport transfers, city travel, business
@@ -159,7 +159,7 @@ export default function HomePage() {
 
           <div className="mt-10 grid overflow-hidden rounded-2xl border border-white/10 bg-navy-950/55 backdrop-blur-sm sm:grid-cols-3 sm:divide-x sm:divide-white/10">
             {[
-              ["Chauffeur included", "No self-drive option"],
+              ["professionally included", "No self-drive option"],
               ["Clear quotations", "Inclusions stated in writing"],
               ["Nationwide on request", "Kathmandu-based team"],
             ].map(([title, text]) => (
@@ -191,7 +191,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="A considered way to travel"
                 title="Private transport, planned around your journey."
-                description="Majestic Rentals arranges premium chauffeur-driven vehicles for travellers who want a calm, reliable way to move through Nepal. We keep the process simple: you share the plan, we check what is genuinely available and you receive a clear quotation."
+                description="Majestic Rentals arranges premium professionally-driven vehicles for travellers who want a calm, reliable way to move through Nepal. We keep the process simple: you share the plan, we check what is genuinely available and you receive a clear quotation."
               />
               <div className="mt-9 grid gap-5 sm:grid-cols-3">
                 {pillars.map((pillar) => {
@@ -231,7 +231,7 @@ export default function HomePage() {
               <dl className="mt-5 space-y-4 text-sm">
                 {[
                   ["Base", siteConfig.hub],
-                  ["Service model", "Chauffeur-driven rentals only"],
+                  ["Service model", "professionally-driven rentals only"],
                   ["Booking", "Inquiry-led; availability confirmed first"],
                   ["Fleet", "Vehicle categories confirmed per request"],
                   ["Coverage", "Kathmandu and nationwide Nepal on request"],
@@ -421,7 +421,7 @@ export default function HomePage() {
               <CheckList
                 className="mt-8"
                 items={[
-                  "Chauffeur-driven only — we do not offer self-drive rentals.",
+                  "professionally-driven only — we do not offer self-drive rentals.",
                   "Vehicle categories, not a pretend live inventory.",
                   "Written quotations before any booking is confirmed.",
                   "Verified reviews only. We do not invent testimonials or ratings.",
@@ -492,7 +492,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Questions"
                 title="The answers that matter before you inquire."
-                description="A few common questions about availability, chauffeurs, quotations and how a request becomes a booking."
+                description="A few common questions about availability, professionallys, quotations and how a request becomes a booking."
               />
               <div className="mt-8 rounded-2xl border border-navy-100 bg-navy-50/70 p-5">
                 <p className="text-sm font-bold text-navy-950">
@@ -527,7 +527,7 @@ export default function HomePage() {
       <JsonLd
         data={[
           howToSchema({
-            name: "How to arrange a chauffeur-driven car rental in Nepal",
+            name: "How to arrange a professionally-driven car rental in Nepal",
             description:
               "Send your travel details, receive a written quotation, and confirm your journey with Majestic Rentals.",
             steps: [

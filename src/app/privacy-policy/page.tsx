@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
                 1. Who we are
               </h2>
               <p className="mt-3">
-                Majestic Rentals is a chauffeur-driven car rental service based
+                Majestic Rentals is a professionally-driven car rental service based
                 in Kathmandu, Nepal. In this policy, “we”, “us” and “our” refer
                 to Majestic Rentals. “You” refers to a visitor to this website or
                 someone who sends an inquiry.

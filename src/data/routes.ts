@@ -90,7 +90,7 @@ export const routes: RouteGuide[] = [
     ],
     seoTitle: "Kathmandu to Pokhara Private Car",
     seoDescription:
-      "Plan a private car from Kathmandu to Pokhara with a chauffeur. Route guidance, typical travel time, suggested stops and an inquiry form for a written quotation.",
+      "Plan a private car from Kathmandu to Pokhara with a professionally. Route guidance, typical travel time, suggested stops and an inquiry form for a written quotation.",
   },
   {
     slug: "kathmandu-to-chitwan",
@@ -160,7 +160,7 @@ export const routes: RouteGuide[] = [
     ],
     seoTitle: "Kathmandu to Chitwan Private Car",
     seoDescription:
-      "Arrange a private car from Kathmandu to Chitwan with a chauffeur. Plan a comfortable journey to Sauraha, with route guidance and an inquiry form for a quotation.",
+      "Arrange a private car from Kathmandu to Chitwan with a professionally. Plan a comfortable journey to Sauraha, with route guidance and an inquiry form for a quotation.",
   },
   {
     slug: "kathmandu-to-lumbini",
@@ -225,7 +225,7 @@ export const routes: RouteGuide[] = [
     ],
     seoTitle: "Kathmandu to Lumbini Private Car",
     seoDescription:
-      "Plan a private car from Kathmandu to Lumbini with a chauffeur. Route guidance, travel-time expectations, suggested stops and an inquiry form for a written quotation.",
+      "Plan a private car from Kathmandu to Lumbini with a professionally. Route guidance, travel-time expectations, suggested stops and an inquiry form for a written quotation.",
   },
   {
     slug: "kathmandu-to-muktinath",

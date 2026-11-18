@@ -11,7 +11,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Terms & Conditions",
   description:
-    "Draft terms for Majestic Rentals inquiries and chauffeur-driven rentals, covering quotations, bookings, vehicle categories, changes and liability. Pending legal review.",
+    "Draft terms for Majestic Rentals inquiries and professionally-driven rentals, covering quotations, bookings, vehicle categories, changes and liability. Pending legal review.",
   path: "/terms-and-conditions",
 });
 
@@ -23,7 +23,7 @@ export default function TermsPage() {
       <PageHero
         eyebrow="Legal"
         title="Terms & Conditions"
-        description="How inquiries, quotations and chauffeur-driven rentals are intended to work. These terms are a draft and are marked for legal review before the site is treated as launch-ready."
+        description="How inquiries, quotations and professionally-driven rentals are intended to work. These terms are a draft and are marked for legal review before the site is treated as launch-ready."
         crumbs={[{ label: "Terms & Conditions" }]}
       />
 
@@ -59,7 +59,7 @@ export default function TermsPage() {
                 2. What we provide
               </h2>
               <p className="mt-3">
-                Majestic Rentals provides chauffeur-driven private vehicle
+                Majestic Rentals provides professionally-driven private vehicle
                 rentals. Every rental includes a driver. We do not offer
                 self-drive rentals, and we do not provide vehicles for a customer
                 to drive themselves.

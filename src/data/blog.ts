@@ -362,7 +362,7 @@ export const articles: Article[] = [
       {
         question: "Are electric vehicles available with a driver?",
         answer:
-          "At Majestic Rentals, EV rentals are chauffeur-driven only. Availability depends on the vehicle, dates and route. We do not offer self-drive EV rentals.",
+          "At Majestic Rentals, EV rentals are professionally-driven only. Availability depends on the vehicle, dates and route. We do not offer self-drive EV rentals.",
       },
       {
         question: "Can an EV handle a mountain route?",

@@ -15,7 +15,7 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "Does Majestic Rentals offer self-drive rentals?",
         answer:
-          "No. We provide chauffeur-driven rentals only. Every vehicle is arranged with a driver, and we do not offer vehicles for self-drive use.",
+          "No. We provide professionally-driven rentals only. Every vehicle is arranged with a driver, and we do not offer vehicles for self-drive use.",
       },
       {
         question: "How do I book a vehicle?",
@@ -47,7 +47,7 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "Are drivers included in every rental?",
         answer:
-          "Yes. All Majestic Rentals vehicles are provided with a chauffeur. You do not need to arrange a separate driver.",
+          "Yes. All Majestic Rentals vehicles are provided with a professionally. You do not need to arrange a separate driver.",
       },
       {
         question: "Can I request a specific vehicle model?",

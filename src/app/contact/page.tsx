@@ -31,7 +31,7 @@ function buildWhatsAppUrl(inquiry: {
   message?: string;
 }): string {
   const bodyParts: string[] = [];
-  bodyParts.push("Hello Majestic Rentals, I would like to inquire about a chauffeur-driven rental.");
+  bodyParts.push("Hello Majestic Rentals, I would like to inquire about a professionally-driven rental.");
   bodyParts.push("");
   if (inquiry.name) bodyParts.push(`Name: ${inquiry.name}`);
   if (inquiry.phone) bodyParts.push(`Phone: ${inquiry.phone}`);
@@ -52,7 +52,7 @@ function buildWhatsAppUrl(inquiry: {
 export const metadata: Metadata = pageMetadata({
   title: "Contact Majestic Rentals",
   description:
-    "Contact Majestic Rentals for chauffeur-driven car rentals in Nepal. Message us on WhatsApp for availability and a written quotation.",
+    "Contact Majestic Rentals for professionally-driven car rentals in Nepal. Message us on WhatsApp for availability and a written quotation.",
   path: "/contact",
 });
 
@@ -66,7 +66,7 @@ export default function ContactPage() {
     name: "Contact Majestic Rentals",
     url: absoluteUrl("/contact"),
     description:
-      "Contact information for Majestic Rentals, a chauffeur-driven car rental service based in Kathmandu, Nepal.",
+      "Contact information for Majestic Rentals, a professionally-driven car rental service based in Kathmandu, Nepal.",
     about: { "@id": `${siteConfig.url}/#organization` },
   };
 
@@ -290,7 +290,7 @@ export default function ContactPage() {
                   />
                   <div>
                     <h2 className="text-sm font-bold text-navy-950">
-                      Chauffeur-driven only
+                      professionally-driven only
                     </h2>
                     <p className="mt-1.5 text-sm leading-6 text-slate-600">
                       Every Majestic Rentals vehicle is provided with a driver.
@@ -317,7 +317,7 @@ export default function ContactPage() {
                 Is a driver always included?
               </h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                Yes. Majestic Rentals is chauffeur-driven only. We do not offer
+                Yes. Majestic Rentals is professionally-driven only. We do not offer
                 self-drive rentals.
               </p>
             </div>

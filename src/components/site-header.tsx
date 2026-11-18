@@ -53,7 +53,7 @@ export function SiteHeader() {
       <div className="bg-navy-950 text-white">
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-between gap-3 px-4 text-[10px] font-medium tracking-wide sm:px-6 sm:text-[11px] sm:gap-4">
           <p className="text-navy-100/80 truncate sm:truncate-none">
-            Kathmandu-based · Chauffeur-driven rentals across Nepal
+            Kathmandu-based · professionally-driven rentals across Nepal
           </p>
           <div className="flex items-center gap-2 sm:gap-4 flex-wrap sm:flex-nowrap">
             {phone ? (
@@ -85,15 +85,15 @@ export function SiteHeader() {
         <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
           <Link
             href="/"
-            className="group flex shrink-0 items-center justify-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-4"
+            className="group flex shrink-0 items-center justify-center h-full rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-4"
             aria-label="Majestic Rentals — home"
           >
             <Image
               src="/images/logo.svg"
-              alt="Majestic Rentals — premium chauffeur-driven car rentals in Nepal"
+              alt="Majestic Rentals — premium professionally-driven car rentals in Nepal"
               width={120}
               height={38}
-              className="block"
+              className="block h-12 w-auto object-contain"
             />
           </Link>
 

@@ -42,7 +42,7 @@ export function pageMetadata({
   path,
   absoluteTitle = false,
   image = "/images/og-default.jpg",
-  imageAlt = "Majestic Rentals — premium chauffeur-driven car rentals in Nepal",
+  imageAlt = "Majestic Rentals — premium professionally-driven car rentals in Nepal",
   noindex = false,
   type = "website",
   publishedTime,

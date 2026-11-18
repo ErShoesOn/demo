@@ -30,7 +30,7 @@ export const tourPackages: TourPackage[] = [
     name: "Kathmandu Valley Heritage",
     duration: "3 days / 2 nights",
     summary:
-      "A short private itinerary covering the valley's best-known heritage sites with a chauffeur on hand.",
+      "A short private itinerary covering the valley's best-known heritage sites with a professionally on hand.",
     intro: [
       "This three-day outline is designed for travellers who want a thoughtful introduction to the Kathmandu Valley without rushing between sites. It combines the old city, Boudhanath and the historic cities of Patan and Bhaktapur.",
       "The itinerary is indicative. We confirm timings, vehicle category and the final route with your quotation, and can adjust the pace to your interests.",
@@ -64,7 +64,7 @@ export const tourPackages: TourPackage[] = [
       },
     ],
     included: [
-      "Private chauffeur-driven vehicle for the agreed itinerary",
+      "Private professionally-driven vehicle for the agreed itinerary",
       "Airport pickup and drop-off as scheduled",
       "Fuel and driver allowance as stated in the quotation",
       "Pre-trip coordination and a written itinerary",
@@ -100,7 +100,7 @@ export const tourPackages: TourPackage[] = [
     ],
     seoTitle: "Kathmandu Valley Heritage Tour Package",
     seoDescription:
-      "Request a private 3-day Kathmandu Valley heritage itinerary covering Durbar Square, Boudhanath, Patan and Bhaktapur with a chauffeur-driven vehicle.",
+      "Request a private 3-day Kathmandu Valley heritage itinerary covering Durbar Square, Boudhanath, Patan and Bhaktapur with a professionally-driven vehicle.",
   },
   {
     slug: "kathmandu-pokhara-escape",
@@ -151,7 +151,7 @@ export const tourPackages: TourPackage[] = [
       },
     ],
     included: [
-      "Private chauffeur-driven vehicle for the agreed route",
+      "Private professionally-driven vehicle for the agreed route",
       "Airport pickup and drop-off as scheduled",
       "Kathmandu–Pokhara road journey with planned stops",
       "Written itinerary and quotation before confirmation",
@@ -187,7 +187,7 @@ export const tourPackages: TourPackage[] = [
     ],
     seoTitle: "Kathmandu and Pokhara Tour Package",
     seoDescription:
-      "Request a private 5-day Kathmandu and Pokhara itinerary with a chauffeur. Combine valley heritage, a scenic road journey and lakeside time in Pokhara.",
+      "Request a private 5-day Kathmandu and Pokhara itinerary with a professionally. Combine valley heritage, a scenic road journey and lakeside time in Pokhara.",
   },
   {
     slug: "kathmandu-chitwan-pokhara",
@@ -248,7 +248,7 @@ export const tourPackages: TourPackage[] = [
       },
     ],
     included: [
-      "Private chauffeur-driven vehicle for the confirmed route",
+      "Private professionally-driven vehicle for the confirmed route",
       "Airport pickup and drop-off as scheduled",
       "Intercity transfers between the listed destinations",
       "Written itinerary and quotation before confirmation",
@@ -284,7 +284,7 @@ export const tourPackages: TourPackage[] = [
     ],
     seoTitle: "Kathmandu Chitwan Pokhara Tour Package",
     seoDescription:
-      "Request a private 7-day Kathmandu, Chitwan and Pokhara itinerary with a chauffeur. Plan valley heritage, wildlife and lakeside travel in one route.",
+      "Request a private 7-day Kathmandu, Chitwan and Pokhara itinerary with a professionally. Plan valley heritage, wildlife and lakeside travel in one route.",
   },
 ];
 

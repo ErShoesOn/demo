@@ -15,7 +15,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Destinations Across Nepal",
   description:
-    "Destination guides for Kathmandu, Pokhara, Chitwan, Lumbini and Muktinath, with practical transport notes and private chauffeur-driven travel options.",
+    "Destination guides for Kathmandu, Pokhara, Chitwan, Lumbini and Muktinath, with practical transport notes and private professionally-driven travel options.",
   path: "/destinations",
 });
 

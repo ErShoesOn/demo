@@ -101,7 +101,7 @@ type TranslationKey =
   | "aeo.bookingProcess.step2"
   | "aeo.bookingProcess.step3"
   | "aeo.bookingProcess.step4"
-  | "footer.chauffeurOnly"
+  | "footer.professionallyOnly"
   | "footer.nationwide"
   | "footer.availability";
 
@@ -109,9 +109,9 @@ export type Translations = Record<TranslationKey, string>;
 
 const en: Translations = {
   "site.name": "Majestic Rentals",
-  "site.tagline": "Premium chauffeur-driven car rentals across Nepal",
+  "site.tagline": "Premium professionally-driven car rentals across Nepal",
   "site.description":
-    "Majestic Rentals arranges premium chauffeur-driven car rentals, EV rentals, airport transfers and private travel across Nepal. Based in Kathmandu, serving travellers nationwide. Send an inquiry for availability and a quotation.",
+    "Majestic Rentals arranges premium professionally-driven car rentals, EV rentals, airport transfers and private travel across Nepal. Based in Kathmandu, serving travellers nationwide. Send an inquiry for availability and a quotation.",
   "nav.home": "Home",
   "nav.about": "About",
   "nav.fleet": "Our Fleet",
@@ -164,7 +164,7 @@ const en: Translations = {
   "aeo.bookingProcess.step2": "We check vehicle and driver availability for your route.",
   "aeo.bookingProcess.step3": "You receive a written quotation with the vehicle category, inclusions and price.",
   "aeo.bookingProcess.step4": "Confirm in writing, and your journey is arranged.",
-  "footer.chauffeurOnly": "Chauffeur-driven only · Nationwide Nepal on request",
+  "footer.professionallyOnly": "professionally-driven only · Nationwide Nepal on request",
   "footer.nationwide": "Nationwide Nepal on request · Availability confirmed before booking",
   "footer.availability": "Availability confirmed before booking",
 };
@@ -225,7 +225,7 @@ const hi: Translations = {
   "aeo.bookingProcess.step2": "हम आपके मार्ग के लिए वाहन और चालक की उपलब्धता जांचते हैं।",
   "aeo.bookingProcess.step3": "आपको वाहन श्रेणी, समावेश और मूल्य के साथ लिखित कोटेशन प्राप्त होता है।",
   "aeo.bookingProcess.step4": "लिखित में पुष्टि करें, और आपकी यात्रा की व्यवस्था की जाती है।",
-  "footer.chauffeurOnly": "केवल चालक-चालित · अनुरोध पर राष्ट्रव्यापी नेपाल",
+  "footer.professionallyOnly": "केवल चालक-चालित · अनुरोध पर राष्ट्रव्यापी नेपाल",
   "footer.nationwide": "अनुरोध पर राष्ट्रव्यापी नेपाल · बुकिंग से पहले उपलब्धता की पुष्टि",
   "footer.availability": "बुकिंग से पहले उपलब्धता की पुष्टि",
 };
@@ -286,7 +286,7 @@ const zh: Translations = {
   "aeo.bookingProcess.step2": "我们检查您路线的车辆和司机可用性。",
   "aeo.bookingProcess.step3": "您收到包含车辆类别、包含内容和价格的书面报价。",
   "aeo.bookingProcess.step4": "书面确认后，即安排您的行程。",
-  "footer.chauffeurOnly": "仅限司机驾驶 · 尼泊尔全国按需提供",
+  "footer.professionallyOnly": "仅限司机驾驶 · 尼泊尔全国按需提供",
   "footer.nationwide": "尼泊尔全国按需提供 · 预订前确认可用性",
   "footer.availability": "预订前确认可用性",
 };
@@ -347,7 +347,7 @@ const ne: Translations = {
   "aeo.bookingProcess.step2": "हामी तपाईंको मार्गको लागि सवारी र चालकको उपलब्धता जाँच गर्छौं।",
   "aeo.bookingProcess.step3": "तपाईंलाई सवारी श्रेणी, समावेश र मूल्यसहित लिखित कोटेशन प्राप्त हुन्छ।",
   "aeo.bookingProcess.step4": "लिखितमा पुष्टि गर्नुहोस्, र तपाईंको यात्रा व्यवस्थित गरिन्छ।",
-  "footer.chauffeurOnly": "केवल चालक सहित · अनुरोधमा राष्ट्रव्यापी नेपाल",
+  "footer.professionallyOnly": "केवल चालक सहित · अनुरोधमा राष्ट्रव्यापी नेपाल",
   "footer.nationwide": "अनुरोधमा राष्ट्रव्यापी नेपाल · बुकिंगअघि उपलब्धता पुष्टि",
   "footer.availability": "बुकिंगअघि उपलब्धता पुष्टि",
 };

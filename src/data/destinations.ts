@@ -33,7 +33,7 @@ export const destinations: Destination[] = [
       "Nepal's capital and our primary service hub, with heritage sites, business districts and onward road connections.",
     intro: [
       "Kathmandu is where most journeys begin. The city combines a dense historic core with modern hotels, offices and the airport, and it is the natural base for exploring the Kathmandu Valley.",
-      "Traffic and narrow streets can make a private chauffeur more practical than driving yourself, especially if your schedule includes several stops in a day. We arrange city travel, airport transfers and departures to destinations across Nepal.",
+      "Traffic and narrow streets can make a private professionally more practical than driving yourself, especially if your schedule includes several stops in a day. We arrange city travel, airport transfers and departures to destinations across Nepal.",
     ],
     image: "/images/kathmandu-durbar-square.jpg",
     imageAlt: "Historic temple architecture in Kathmandu Durbar Square",
@@ -74,7 +74,7 @@ export const destinations: Destination[] = [
       {
         question: "Do you provide car rental in Kathmandu?",
         answer:
-          "Yes. We arrange chauffeur-driven vehicles for airport transfers, city travel, business itineraries and day trips in and around Kathmandu. Send your dates and plan for availability and a quotation.",
+          "Yes. We arrange professionally-driven vehicles for airport transfers, city travel, business itineraries and day trips in and around Kathmandu. Send your dates and plan for availability and a quotation.",
       },
       {
         question: "Can I visit several heritage sites in one day?",
@@ -89,7 +89,7 @@ export const destinations: Destination[] = [
     ],
     seoTitle: "Car Rental in Kathmandu with Driver",
     seoDescription:
-      "Request a chauffeur-driven car rental in Kathmandu for airport transfers, city travel, heritage visits and business itineraries. Availability confirmed on inquiry.",
+      "Request a professionally-driven car rental in Kathmandu for airport transfers, city travel, heritage visits and business itineraries. Availability confirmed on inquiry.",
   },
   {
     slug: "pokhara",
@@ -223,7 +223,7 @@ export const destinations: Destination[] = [
     ],
     seoTitle: "Private Car to Chitwan National Park",
     seoDescription:
-      "Arrange a private chauffeur-driven car to Chitwan from Kathmandu or Pokhara. Travel to Sauraha and Chitwan National Park with a written quotation and confirmed plan.",
+      "Arrange a private professionally-driven car to Chitwan from Kathmandu or Pokhara. Travel to Sauraha and Chitwan National Park with a written quotation and confirmed plan.",
   },
   {
     slug: "lumbini",
@@ -357,7 +357,7 @@ export const destinations: Destination[] = [
     ],
     seoTitle: "Kathmandu to Muktinath Private Car",
     seoDescription:
-      "Plan a private chauffeur-driven journey from Kathmandu to Muktinath. Discuss route, season, overnight stops and vehicle suitability with Majestic Rentals.",
+      "Plan a private professionally-driven journey from Kathmandu to Muktinath. Discuss route, season, overnight stops and vehicle suitability with Majestic Rentals.",
   },
 ];
 

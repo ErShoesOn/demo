@@ -18,7 +18,7 @@ const manrope = Manrope({
 });
 
 const defaultTitle =
-  "Majestic Rentals | Chauffeur-Driven Car Rentals in Nepal";
+  "Majestic Rentals | professionally-Driven Car Rentals in Nepal";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
         url: "/images/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: "Majestic Rentals — chauffeur-driven car rentals across Nepal",
+        alt: "Majestic Rentals — professionally-driven car rentals across Nepal",
       },
     ],
   },

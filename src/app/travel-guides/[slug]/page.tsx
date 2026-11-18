@@ -163,11 +163,11 @@ export default async function TravelGuidePage({ params }: PageProps) {
                     <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
                   </ButtonLink>
                   <ButtonLink
-                    href="/services/chauffeur-driven-car-rental"
+                    href="/services/professionally-driven-car-rental"
                     variant="secondary"
                     size="md"
                   >
-                    About chauffeur-driven rentals
+                    About professionally-driven rentals
                   </ButtonLink>
                 </div>
               </div>

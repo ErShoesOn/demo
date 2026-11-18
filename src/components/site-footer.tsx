@@ -37,13 +37,13 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="mt-5 text-sm leading-7 text-navy-100/75">
-              Premium chauffeur-driven car rentals, airport transfers and private
+              Premium professionally-driven car rentals, airport transfers and private
               travel across Nepal. Based in Kathmandu, serving travellers
               nationwide on request.
             </p>
             <p className="mt-4 text-xs leading-6 text-navy-300">
               We do not offer self-drive rentals. Every journey includes a
-              chauffeur.
+              professionally.
             </p>
 
             <div className="mt-6 space-y-3 text-sm">
@@ -176,7 +176,7 @@ export function SiteFooter() {
         <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-navy-300 sm:flex-row sm:items-center sm:justify-between">
           <p>© {siteConfig.name}. All rights reserved.</p>
           <p>
-            Chauffeur-driven only · Nationwide Nepal on request · Availability
+            professionally-driven only · Nationwide Nepal on request · Availability
             confirmed before booking
           </p>
         </div>

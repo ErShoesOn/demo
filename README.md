@@ -1,6 +1,6 @@
 # Majestic Rentals Website
 
-A premium, inquiry-led website for Majestic Rentals — chauffeur-driven car
+A premium, inquiry-led website for Majestic Rentals — professionally-driven car
 rentals, EV rentals, airport transfers and private travel across Nepal.
 
 The site is built as a static-first content site with a small server-side

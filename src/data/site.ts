@@ -43,9 +43,9 @@ export const siteConfig: SiteConfig = {
   name: "Majestic Rentals",
   legalName: "Majestic Rentals",
   url: "https://majesticrentals.com.np",
-  tagline: "Premium chauffeur-driven car rentals across Nepal",
+  tagline: "Premium professionally-driven car rentals across Nepal",
   description:
-    "Majestic Rentals arranges premium chauffeur-driven car rentals, EV rentals, airport transfers and private travel across Nepal. Based in Kathmandu, serving travellers nationwide. Send an inquiry for availability and a quotation.",
+    "Majestic Rentals arranges premium professionally-driven car rentals, EV rentals, airport transfers and private travel across Nepal. Based in Kathmandu, serving travellers nationwide. Send an inquiry for availability and a quotation.",
   locale: "en_NP",
   hub: "Kathmandu, Nepal",
   contact: {
@@ -82,7 +82,7 @@ export const footerNav = {
     { label: "FAQs", href: "/faqs" },
   ],
   services: [
-    { label: "Chauffeur-Driven Rentals", href: "/services/chauffeur-driven-car-rental" },
+    { label: "professionally-Driven Rentals", href: "/services/professionally-driven-car-rental" },
     { label: "Electric Vehicle Rentals", href: "/services/electric-vehicle-rental" },
     { label: "Airport Transfers", href: "/services/airport-transfers" },
     { label: "Corporate Transport", href: "/services/corporate-transport" },
@@ -108,7 +108,7 @@ export const serviceAreas = [
 ] as const;
 
 export const defaultWhatsAppMessage =
-  "Hello Majestic Rentals, I would like to inquire about a chauffeur-driven rental. My travel date, pickup point and destination are:";
+  "Hello Majestic Rentals, I would like to inquire about a professionally-driven rental. My travel date, pickup point and destination are:";
 
 function normalisePhone(value: string) {
   return value.replace(/[^\d+]/g, "");

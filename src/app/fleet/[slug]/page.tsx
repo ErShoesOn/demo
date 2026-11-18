@@ -224,10 +224,10 @@ export default async function VehicleCategoryPage({ params }: PageProps) {
       <JsonLd
         data={[
           serviceSchema({
-            name: `${category.name} with chauffeur`,
+            name: `${category.name} with professionally`,
             description: category.seoDescription,
             path: `/fleet/${category.slug}`,
-            serviceType: "Chauffeur-driven vehicle rental",
+            serviceType: "professionally-driven vehicle rental",
           }),
           faqSchema(category.faqs),
           breadcrumbSchema([

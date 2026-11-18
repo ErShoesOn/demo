@@ -13,9 +13,9 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Our Fleet: Chauffeur-Driven Vehicle Categories",
+  title: "Our Fleet: professionally-Driven Vehicle Categories",
   description:
-    "Browse chauffeur-driven vehicle categories for Nepal: executive sedan, premium SUV, compact hatchback, premium vehicle and electric vehicle. Availability confirmed on inquiry.",
+    "Browse professionally-driven vehicle categories for Nepal: executive sedan, premium SUV, compact hatchback, premium vehicle and electric vehicle. Availability confirmed on inquiry.",
   path: "/fleet",
 });
 

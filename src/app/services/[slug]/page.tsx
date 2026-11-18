@@ -156,7 +156,7 @@ export default async function ServicePage({ params }: PageProps) {
                 </p>
               </div>
 
-              <Notice title="Chauffeur-driven only" tone="light">
+              <Notice title="professionally-driven only" tone="light">
                 Every Majestic Rentals vehicle is provided with a driver. We do
                 not offer self-drive rentals.
               </Notice>

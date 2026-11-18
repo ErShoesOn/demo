@@ -14,7 +14,7 @@ import type { ServiceIcon } from "@/data/services";
 import type { VehicleIcon } from "@/data/vehicles";
 
 const serviceIcons: Record<ServiceIcon, LucideIcon> = {
-  chauffeur: CarFront,
+  professionally: CarFront,
   ev: Zap,
   airport: Plane,
   corporate: Briefcase,

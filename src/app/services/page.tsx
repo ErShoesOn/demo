@@ -14,9 +14,9 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Chauffeur-Driven Car Rental Services in Nepal",
+  title: "professionally-Driven Car Rental Services in Nepal",
   description:
-    "Explore Majestic Rentals services: chauffeur-driven car rental, EV rental, airport transfers, corporate transport, wedding transport and intercity travel in Nepal.",
+    "Explore Majestic Rentals services: professionally-driven car rental, EV rental, airport transfers, corporate transport, wedding transport and intercity travel in Nepal.",
   path: "/services",
 });
 
@@ -26,7 +26,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Private transport for the way you need to travel."
-        description="Airport arrivals, city days, business schedules, weddings and journeys across Nepal. Every service is chauffeur-driven, inquiry-led and confirmed with a written quotation."
+        description="Airport arrivals, city days, business schedules, weddings and journeys across Nepal. Every service is professionally-driven, inquiry-led and confirmed with a written quotation."
         crumbs={[{ label: "Services" }]}
         image={{
           src: "/images/prithvi-highway-malekhu.jpg",
@@ -74,7 +74,7 @@ export default function ServicesPage() {
               <div className="mt-7">
                 <CheckList
                   items={[
-                    "A private vehicle and professional chauffeur",
+                    "A private vehicle and professional professionally",
                     "A route and pickup plan agreed before departure",
                     "A written quotation with inclusions and exclusions",
                     "One point of contact for questions before travel",
@@ -90,7 +90,7 @@ export default function ServicesPage() {
                 request.
               </Notice>
               <Notice title="No self-drive option" tone="light">
-                Majestic Rentals provides chauffeur-driven rentals only. We do
+                Majestic Rentals provides professionally-driven rentals only. We do
                 not offer vehicles for self-drive use, including electric
                 vehicles.
               </Notice>

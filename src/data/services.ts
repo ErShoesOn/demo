@@ -1,7 +1,7 @@
 import type { Faq } from "@/data/types";
 
 export type ServiceIcon =
-  | "chauffeur"
+  | "professionally"
   | "ev"
   | "airport"
   | "corporate"
@@ -29,14 +29,14 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "chauffeur-driven-car-rental",
-    name: "Chauffeur-Driven Car Rental",
-    navLabel: "Chauffeur-Driven Rentals",
-    icon: "chauffeur",
+    slug: "professionally-driven-car-rental",
+    name: "professionally-Driven Car Rental",
+    navLabel: "professionally-Driven Rentals",
+    icon: "professionally",
     summary:
       "A private vehicle and driver for city days, business travel, family trips and special occasions.",
     intro:
-      "Majestic Rentals is a chauffeur-driven rental service. You choose the vehicle category and itinerary; we confirm availability and provide a quotation. Your driver handles the road while you focus on the reason for the journey.",
+      "Majestic Rentals is a professionally-driven rental service. You choose the vehicle category and itinerary; we confirm availability and provide a quotation. Your driver handles the road while you focus on the reason for the journey.",
     image: "/images/hero-road.jpg",
     imageAlt: "A highway winding through green hills in Nepal",
     imageCaption:
@@ -48,7 +48,7 @@ export const services: Service[] = [
       "A written quotation before confirmation",
     ],
     included: [
-      "Vehicle and chauffeur for the agreed itinerary",
+      "Vehicle and professionally for the agreed itinerary",
       "Fuel and driver allowance as stated in your quotation",
       "Pickup and drop-off within the agreed route",
       "Pre-trip coordination by phone or WhatsApp",
@@ -69,7 +69,7 @@ export const services: Service[] = [
       {
         question: "Is a driver always included?",
         answer:
-          "Yes. Majestic Rentals provides chauffeur-driven rentals only. We do not offer self-drive rentals.",
+          "Yes. Majestic Rentals provides professionally-driven rentals only. We do not offer self-drive rentals.",
       },
       {
         question: "Can I book a car for a full day in Kathmandu?",
@@ -87,9 +87,9 @@ export const services: Service[] = [
           "Small changes can often be accommodated, but additional distance, time or stops may affect the final charge. Speak to your driver and our team before making significant changes.",
       },
     ],
-    seoTitle: "Chauffeur-Driven Car Rental in Nepal",
+    seoTitle: "professionally-Driven Car Rental in Nepal",
     seoDescription:
-      "Request a chauffeur-driven car rental in Nepal for city travel, business trips, family journeys and special occasions. Private vehicle, professional driver and a written quotation.",
+      "Request a professionally-driven car rental in Nepal for city travel, business trips, family journeys and special occasions. Private vehicle, professional driver and a written quotation.",
   },
   {
     slug: "electric-vehicle-rental",
@@ -97,7 +97,7 @@ export const services: Service[] = [
     navLabel: "Electric Vehicle Rentals",
     icon: "ev",
     summary:
-      "Chauffeur-driven electric vehicles for quieter journeys, planned around real-world range and charging.",
+      "professionally-driven electric vehicles for quieter journeys, planned around real-world range and charging.",
     intro:
       "An electric vehicle can be a comfortable choice for city travel and selected intercity routes. We plan around the vehicle's practical range, the charging stops available on your route and the time your itinerary allows. EV availability is confirmed for each request.",
     image: "/images/prithvi-highway-malekhu.jpg",
@@ -105,13 +105,13 @@ export const services: Service[] = [
     imageCaption:
       "Illustrative image: Prithvi Highway at Malekhu. EV availability and charging plans are confirmed on request.",
     highlights: [
-      "Chauffeur-driven electric vehicle",
+      "professionally-driven electric vehicle",
       "Route and charging plan discussed upfront",
       "Well suited to city days and selected intercity trips",
       "Subject to vehicle and charging availability",
     ],
     included: [
-      "Electric vehicle and chauffeur for the agreed itinerary",
+      "Electric vehicle and professionally for the agreed itinerary",
       "Charging planned as part of the confirmed route",
       "Pre-trip discussion of range, stops and timing",
       "Written quotation covering the agreed plan",
@@ -132,7 +132,7 @@ export const services: Service[] = [
       {
         question: "Are your electric vehicles self-drive?",
         answer:
-          "No. Our EV rentals include a chauffeur. We do not offer self-drive electric vehicle rentals.",
+          "No. Our EV rentals include a professionally. We do not offer self-drive electric vehicle rentals.",
       },
       {
         question: "Can I take an EV from Kathmandu to Pokhara?",
@@ -152,7 +152,7 @@ export const services: Service[] = [
     ],
     seoTitle: "Electric Car Rental in Nepal with Driver",
     seoDescription:
-      "Request a chauffeur-driven electric vehicle in Nepal. EV rentals for Kathmandu city travel and selected intercity routes, planned around real-world range and charging.",
+      "Request a professionally-driven electric vehicle in Nepal. EV rentals for Kathmandu city travel and selected intercity routes, planned around real-world range and charging.",
   },
   {
     slug: "airport-transfers",
@@ -174,7 +174,7 @@ export const services: Service[] = [
       "One-way and round-trip requests",
     ],
     included: [
-      "Vehicle and chauffeur for the confirmed transfer",
+      "Vehicle and professionally for the confirmed transfer",
       "Pickup or drop-off at the agreed airport meeting point",
       "Flight and arrival-time coordination",
       "Written quotation including any waiting-time terms",
@@ -215,7 +215,7 @@ export const services: Service[] = [
     ],
     seoTitle: "Kathmandu Airport Transfer & Pickup",
     seoDescription:
-      "Request a private Kathmandu airport transfer with a chauffeur. Arrival pickup and departure drop-off at Tribhuvan International Airport, coordinated around your flight.",
+      "Request a private Kathmandu airport transfer with a professionally. Arrival pickup and departure drop-off at Tribhuvan International Airport, coordinated around your flight.",
   },
   {
     slug: "corporate-transport",
@@ -223,7 +223,7 @@ export const services: Service[] = [
     navLabel: "Corporate Transport",
     icon: "corporate",
     summary:
-      "Chauffeur-driven transport for meetings, client visits, conferences and multi-day business itineraries.",
+      "professionally-driven transport for meetings, client visits, conferences and multi-day business itineraries.",
     intro:
       "Reliable movement is part of a productive business trip. We arrange private vehicles with drivers for single transfers, full-day assignments and multi-day corporate itineraries. Tell us the schedule and we will propose a practical plan.",
     image: "/images/kathmandu-durbar-square.jpg",
@@ -237,7 +237,7 @@ export const services: Service[] = [
       "One point of contact for the itinerary",
     ],
     included: [
-      "Vehicle and chauffeur for the agreed business schedule",
+      "Vehicle and professionally for the agreed business schedule",
       "Pickup coordination for the named locations",
       "Pre-trip review of the itinerary and waiting time",
       "A written quotation before confirmation",
@@ -278,7 +278,7 @@ export const services: Service[] = [
     ],
     seoTitle: "Corporate Car Rental in Kathmandu",
     seoDescription:
-      "Chauffeur-driven corporate transport in Kathmandu and across Nepal. Private vehicles for meetings, client visits, conferences and multi-day business itineraries.",
+      "professionally-driven corporate transport in Kathmandu and across Nepal. Private vehicles for meetings, client visits, conferences and multi-day business itineraries.",
   },
   {
     slug: "wedding-event-transport",
@@ -286,7 +286,7 @@ export const services: Service[] = [
     navLabel: "Weddings & Events",
     icon: "wedding",
     summary:
-      "Private chauffeur-driven vehicles for weddings, receptions and special occasions, planned around your schedule.",
+      "Private professionally-driven vehicles for weddings, receptions and special occasions, planned around your schedule.",
     intro:
       "Transport should make the day easier, not add to the list. We arrange vehicles and drivers for wedding parties, guest movement and event logistics. Share the schedule, number of guests and route, and we will confirm what is available.",
     image: "/images/boudhanath-stupa.jpg",
@@ -300,7 +300,7 @@ export const services: Service[] = [
       "Decoration discussed as a separate requirement",
     ],
     included: [
-      "Vehicle and chauffeur for the agreed event schedule",
+      "Vehicle and professionally for the agreed event schedule",
       "Coordination of pickup times and locations",
       "Pre-event review of the route and timing",
       "Written quotation covering the confirmed plan",
@@ -341,7 +341,7 @@ export const services: Service[] = [
     ],
     seoTitle: "Wedding Car Rental in Kathmandu",
     seoDescription:
-      "Request wedding and event transport in Kathmandu with a chauffeur. Private vehicles for wedding parties, receptions, guest movement and special occasions.",
+      "Request wedding and event transport in Kathmandu with a professionally. Private vehicles for wedding parties, receptions, guest movement and special occasions.",
   },
   {
     slug: "intercity-travel",
@@ -351,7 +351,7 @@ export const services: Service[] = [
     summary:
       "Private point-to-point travel between Kathmandu, Pokhara, Chitwan, Lumbini and other destinations in Nepal.",
     intro:
-      "A private car gives you control over departure time, stops and luggage. We arrange chauffeur-driven intercity travel on routes we can genuinely serve, with a clear quotation based on your route and vehicle category. Road, weather and traffic conditions can change travel time.",
+      "A private car gives you control over departure time, stops and luggage. We arrange professionally-driven intercity travel on routes we can genuinely serve, with a clear quotation based on your route and vehicle category. Road, weather and traffic conditions can change travel time.",
     image: "/images/prithvi-highway-malekhu.jpg",
     imageAlt: "A hillside highway in Nepal",
     imageCaption:
@@ -363,7 +363,7 @@ export const services: Service[] = [
       "Route advice before you confirm",
     ],
     included: [
-      "Vehicle and chauffeur for the agreed route",
+      "Vehicle and professionally for the agreed route",
       "Pickup and drop-off at the confirmed locations",
       "Pre-trip route and timing discussion",
       "Written quotation including any overnight arrangements",
@@ -404,7 +404,7 @@ export const services: Service[] = [
     ],
     seoTitle: "Intercity Car Travel in Nepal",
     seoDescription:
-      "Private chauffeur-driven intercity travel in Nepal. Request a car between Kathmandu, Pokhara, Chitwan, Lumbini and other destinations with a clear written quotation.",
+      "Private professionally-driven intercity travel in Nepal. Request a car between Kathmandu, Pokhara, Chitwan, Lumbini and other destinations with a clear written quotation.",
   },
 ];
 

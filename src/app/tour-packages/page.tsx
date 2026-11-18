@@ -14,9 +14,9 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Nepal Tour Packages with a Private Chauffeur",
+  title: "Nepal Tour Packages with a Private professionally",
   description:
-    "Explore indicative private tour itineraries for the Kathmandu Valley, Pokhara and Chitwan. Chauffeur-driven transport with a written quotation before confirmation.",
+    "Explore indicative private tour itineraries for the Kathmandu Valley, Pokhara and Chitwan. professionally-driven transport with a written quotation before confirmation.",
   path: "/tour-packages",
 });
 
@@ -26,7 +26,7 @@ export default function TourPackagesPage() {
       <PageHero
         eyebrow="Tour packages"
         title="Private itineraries, planned around the road."
-        description="These outlines show how a private chauffeur-driven journey across Nepal can fit together. They are planning frameworks, not fixed products: dates, pace, vehicle and inclusions are confirmed with your quotation."
+        description="These outlines show how a private professionally-driven journey across Nepal can fit together. They are planning frameworks, not fixed products: dates, pace, vehicle and inclusions are confirmed with your quotation."
         crumbs={[{ label: "Tour Packages" }]}
         image={{
           src: "/images/muktinath-temple.jpg",
@@ -69,12 +69,12 @@ export default function TourPackagesPage() {
               <SectionHeading
                 eyebrow="How packages work"
                 title="Transport is the constant. Everything else is planned around it."
-                description="We are a chauffeur-driven rental service. A tour outline describes the private transport we can arrange; hotels, guides, permits and activities are separate unless a quotation says otherwise."
+                description="We are a professionally-driven rental service. A tour outline describes the private transport we can arrange; hotels, guides, permits and activities are separate unless a quotation says otherwise."
               />
               <div className="mt-7">
                 <CheckList
                   items={[
-                    "A private vehicle and chauffeur for the agreed itinerary",
+                    "A private vehicle and professionally for the agreed itinerary",
                     "A route and daily rhythm discussed before you confirm",
                     "Written inclusions, exclusions and quotation",
                     "Flexibility to adjust the pace where the plan allows",
@@ -147,7 +147,7 @@ export default function TourPackagesPage() {
                 Style
               </p>
               <p className="mt-1 text-sm leading-6 text-navy-950">
-                Private, unhurried and chauffeur-driven. No self-drive option and
+                Private, unhurried and professionally-driven. No self-drive option and
                 no shared group departures.
               </p>
             </div>

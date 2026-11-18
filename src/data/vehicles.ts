@@ -51,7 +51,7 @@ export const vehicleCategories: VehicleCategory[] = [
       "Short city itineraries",
     ],
     features: [
-      "Private chauffeur",
+      "Private professionally",
       "Air-conditioned cabin",
       "Comfortable seating for city distances",
       "Luggage space suited to light travel",
@@ -81,7 +81,7 @@ export const vehicleCategories: VehicleCategory[] = [
     ],
     seoTitle: "Executive Sedan Rental with Driver in Nepal",
     seoDescription:
-      "Request an executive sedan with a chauffeur for airport transfers, business travel and city journeys in Kathmandu and across Nepal. Availability confirmed on inquiry.",
+      "Request an executive sedan with a professionally for airport transfers, business travel and city journeys in Kathmandu and across Nepal. Availability confirmed on inquiry.",
   },
   {
     slug: "premium-suv",
@@ -103,7 +103,7 @@ export const vehicleCategories: VehicleCategory[] = [
       "Guests travelling to hill and mountain areas",
     ],
     features: [
-      "Private chauffeur",
+      "Private professionally",
       "Higher seating position and ground clearance",
       "More luggage space than a sedan",
       "Comfortable for longer road journeys",
@@ -133,7 +133,7 @@ export const vehicleCategories: VehicleCategory[] = [
     ],
     seoTitle: "Premium SUV Rental with Driver in Nepal",
     seoDescription:
-      "Request a premium SUV with a chauffeur for family trips, longer routes and mountain travel in Nepal. Passenger and luggage capacity confirmed on inquiry.",
+      "Request a premium SUV with a professionally for family trips, longer routes and mountain travel in Nepal. Passenger and luggage capacity confirmed on inquiry.",
   },
   {
     slug: "compact-hatchback",
@@ -155,7 +155,7 @@ export const vehicleCategories: VehicleCategory[] = [
       "Light luggage",
     ],
     features: [
-      "Private chauffeur",
+      "Private professionally",
       "Easy to manoeuvre in city traffic",
       "Lower rental cost than larger categories, when available",
       "Air-conditioned cabin",
@@ -185,7 +185,7 @@ export const vehicleCategories: VehicleCategory[] = [
     ],
     seoTitle: "Compact Hatchback Rental with Driver in Kathmandu",
     seoDescription:
-      "Request a compact hatchback with a chauffeur for short city trips in Kathmandu. A practical private car for solo travellers and couples with light luggage.",
+      "Request a compact hatchback with a professionally for short city trips in Kathmandu. A practical private car for solo travellers and couples with light luggage.",
   },
   {
     slug: "premium-vehicle",
@@ -207,7 +207,7 @@ export const vehicleCategories: VehicleCategory[] = [
       "Guests who prefer extra comfort",
     ],
     features: [
-      "Private chauffeur",
+      "Private professionally",
       "Upgraded cabin comfort",
       "Discreet, professional service",
       "Suitable for special occasions",
@@ -237,7 +237,7 @@ export const vehicleCategories: VehicleCategory[] = [
     ],
     seoTitle: "Premium Car Rental with Driver in Nepal",
     seoDescription:
-      "Request a premium vehicle with a chauffeur for executive travel, weddings and special occasions in Nepal. Vehicle availability and details confirmed on inquiry.",
+      "Request a premium vehicle with a professionally for executive travel, weddings and special occasions in Nepal. Vehicle availability and details confirmed on inquiry.",
   },
   {
     slug: "electric-vehicle",
@@ -245,7 +245,7 @@ export const vehicleCategories: VehicleCategory[] = [
     tagline: "A quieter way to move",
     icon: "ev",
     summary:
-      "A chauffeur-driven EV for city travel and selected intercity routes, planned around charging.",
+      "A professionally-driven EV for city travel and selected intercity routes, planned around charging.",
     intro: [
       "Electric vehicles offer a quieter cabin and a different kind of journey. They work best when the route and charging plan are clear from the start, especially outside Kathmandu.",
       "We discuss range, charging stops and timing before confirming an EV booking. If a route is not practical for the available vehicle, we will say so and suggest an alternative.",
@@ -259,7 +259,7 @@ export const vehicleCategories: VehicleCategory[] = [
       "Selected intercity trips with charging stops",
     ],
     features: [
-      "Private chauffeur",
+      "Private professionally",
       "Quiet electric drivetrain",
       "Charging planned into the itinerary",
       "Lower tailpipe emissions than a petrol or diesel vehicle",
@@ -274,7 +274,7 @@ export const vehicleCategories: VehicleCategory[] = [
       {
         question: "Can I rent an EV without a driver?",
         answer:
-          "No. Our EV rentals are chauffeur-driven only. We do not offer self-drive EV rentals.",
+          "No. Our EV rentals are professionally-driven only. We do not offer self-drive EV rentals.",
       },
       {
         question: "Will charging be included in the price?",
@@ -289,7 +289,7 @@ export const vehicleCategories: VehicleCategory[] = [
     ],
     seoTitle: "Electric Vehicle Rental with Driver in Nepal",
     seoDescription:
-      "Request an electric vehicle with a chauffeur for Kathmandu city travel and selected intercity routes in Nepal. EV availability and charging plans confirmed on inquiry.",
+      "Request an electric vehicle with a professionally for Kathmandu city travel and selected intercity routes in Nepal. EV availability and charging plans confirmed on inquiry.",
   },
 ];
 

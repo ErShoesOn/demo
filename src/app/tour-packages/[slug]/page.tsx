@@ -114,7 +114,7 @@ export default async function TourPackagePage({ params }: PageProps) {
                     Travel style
                   </p>
                   <p className="mt-1 text-sm font-bold text-navy-950">
-                    Private, chauffeur-driven
+                    Private, professionally-driven
                   </p>
                 </div>
               </div>
@@ -286,7 +286,7 @@ export default async function TourPackagePage({ params }: PageProps) {
                 </ul>
               </div>
 
-              <Notice title="Chauffeur-driven only" tone="light">
+              <Notice title="professionally-driven only" tone="light">
                 Every vehicle is provided with a driver. We do not offer
                 self-drive rentals or shared group departures.
               </Notice>

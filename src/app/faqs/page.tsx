@@ -15,7 +15,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Frequently Asked Questions",
   description:
-    "Answers about chauffeur-driven rentals in Nepal, vehicle categories, airport transfers, intercity travel, quotations, changes and cancellations.",
+    "Answers about professionally-driven rentals in Nepal, vehicle categories, airport transfers, intercity travel, quotations, changes and cancellations.",
   path: "/faqs",
 });
 
@@ -93,7 +93,7 @@ export default function FaqsPage() {
               <SectionHeading
                 eyebrow="Before you ask"
                 title="The short version."
-                description="Majestic Rentals is a chauffeur-driven rental service. You send an inquiry, we check availability and send a written quotation, and a booking is confirmed only after you accept it. We do not offer self-drive rentals or instant online booking."
+                description="Majestic Rentals is a professionally-driven rental service. You send an inquiry, we check availability and send a written quotation, and a booking is confirmed only after you accept it. We do not offer self-drive rentals or instant online booking."
               />
               <div className="mt-6">
                 <Notice title="A request is not a reservation">

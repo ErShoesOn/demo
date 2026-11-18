@@ -22,7 +22,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "About Majestic Rentals",
   description:
-    "Majestic Rentals is a Kathmandu-based chauffeur-driven car rental service for city travel, airport transfers and journeys across Nepal. Learn how we work.",
+    "Majestic Rentals is a Kathmandu-based professionally-driven car rental service for city travel, airport transfers and journeys across Nepal. Learn how we work.",
   path: "/about",
 });
 
@@ -59,7 +59,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About us"
         title="A calmer way to move through Nepal."
-        description="Majestic Rentals arranges premium chauffeur-driven vehicles for travellers who value a clear plan, a professional driver and honest communication. We are based in Kathmandu and accept requests across Nepal."
+        description="Majestic Rentals arranges premium professionally-driven vehicles for travellers who value a clear plan, a professional driver and honest communication. We are based in Kathmandu and accept requests across Nepal."
         crumbs={[{ label: "About" }]}
         actions={
           <>
@@ -84,7 +84,7 @@ export default function AboutPage() {
               />
               <div className="mt-7 space-y-5 text-base leading-8 text-slate-600">
                 <p>
-                  Majestic Rentals is a chauffeur-driven rental service, not a
+                  Majestic Rentals is a professionally-driven rental service, not a
                   self-drive platform. We arrange private vehicles with drivers
                   for airport transfers, city itineraries, business travel,
                   weddings and events, and selected intercity journeys.
@@ -116,7 +116,7 @@ export default function AboutPage() {
                 <CheckList
                   className="mt-3"
                   items={[
-                    "Chauffeur-driven private vehicle rentals",
+                    "professionally-driven private vehicle rentals",
                     "Airport transfers and intercity journeys",
                     "Corporate, wedding and event transport",
                     "Optional customised tour itineraries",
