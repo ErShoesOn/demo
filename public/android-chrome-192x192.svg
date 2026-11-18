@@ -1,1 +1,11 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180"><rect width="180" height="180" fill="#0a1422"/><text x="90" y="120" font-family="Arial, sans-serif" font-weight="900" font-size="110" text-anchor="middle" fill="#c9a227">M</text><path d="M90 10 L120 50 L60 50 Z" fill="#c9a227"/><text x="90" y="150" font-family="Arial, sans-serif" font-weight="700" font-size="24" text-anchor="middle" fill="#c9a227">MAJESTIC RENTALS</text></svg>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <rect width="192" height="192" fill="#0a1422"/>
+  <path d="M 64 26 L 68 8 L 70 16 L 74 4 L 76 16 L 78 8 L 78.5 16 L 80 8 L 81 16 L 82 8 L 84 16 L 86 8 L 87 16 L 90 6 L 92 16 L 94 6 L 96 16 L 98 8 L 100 16 L 102 8 L 104 16" fill="#c9a227" stroke="#e8b84c" stroke-width="2"/>
+  <path d="M 72 16 L 76 20 L 80 16 L 84 20 L 88 16 L 92 20 L 96 16 L 100 20 L 104 16" fill="none" stroke="#e8b84c" stroke-width="2"/>
+  <circle cx="80" cy="14" r="4" fill="#e8b84c"/>
+  <path d="M 56 78 Q 52 78 52 86 L 52 108 Q 52 118 60 118 L 132 118 Q 140 118 140 108 L 140 86 Q 140 78 132 78 Z" fill="#c9a227" opacity="0.7"/>
+  <circle cx="84" cy="118" r="9" fill="#0a1422"/>
+  <circle cx="108" cy="118" r="9" fill="#0a1422"/>
+  <text x="96" y="140" font-family="Arial, sans-serif" font-weight="900" font-size="34" letter-spacing="1" fill="#0a1422" text-anchor="middle">MAJESTIC</text>
+  <text x="96" y="156" font-family="Arial, sans-serif" font-weight="700" font-size="17" letter-spacing="2" fill="#c9a227" text-anchor="middle">RENTALS</text>
+</svg>

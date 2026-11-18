@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Clock, Mail, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import { ArrowRight, Clock, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
 import { JsonLd } from "@/components/json-ld";
 import { Notice } from "@/components/notice";
@@ -10,7 +10,6 @@ import {
   hasPublicContactDetails,
   phoneHref,
   siteConfig,
-  whatsappHref,
 } from "@/data/site";
 import {
   breadcrumbSchema,
@@ -18,16 +17,54 @@ import {
 } from "@/lib/schema";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
+const GITHUB_REPO = "https://github.com/ErShoesOn/demo";
+
+function buildGitHubIssueUrl(inquiry: {
+  name?: string;
+  phone?: string;
+  email?: string;
+  service?: string;
+  travelDate?: string;
+  passengers?: string;
+  pickup?: string;
+  destination?: string;
+  message?: string;
+}): string {
+  const title = encodeURIComponent(
+    `Rental Inquiry: ${inquiry.service || "Chauffeur-Driven Car Rental"} — ${
+      inquiry.pickup || ""} to ${inquiry.destination || ""}`
+  );
+
+  const bodyParts: string[] = [];
+  bodyParts.push("## New Rental Inquiry — Majestic Rentals");
+  bodyParts.push("");
+  if (inquiry.name) bodyParts.push(`**Name:** ${inquiry.name}`);
+  if (inquiry.phone) bodyParts.push(`**Phone/WhatsApp:** ${inquiry.phone}`);
+  if (inquiry.email) bodyParts.push(`**Email:** ${inquiry.email}`);
+  if (inquiry.service) bodyParts.push(`**Service:** ${inquiry.service}`);
+  if (inquiry.travelDate) bodyParts.push(`**Travel Date:** ${inquiry.travelDate}`);
+  if (inquiry.passengers) bodyParts.push(`**Passengers:** ${inquiry.passengers}`);
+  if (inquiry.pickup) bodyParts.push(`**Pickup:** ${inquiry.pickup}`);
+  if (inquiry.destination) bodyParts.push(`**Destination:** ${inquiry.destination}`);
+  if (inquiry.message) bodyParts.push(`**Message:**\n${inquiry.message}`);
+  bodyParts.push("");
+  bodyParts.push("---");
+  bodyParts.push("Please check availability and send a written quotation.");
+
+  const body = encodeURIComponent(bodyParts.join("\n"));
+
+  return `${GITHUB_REPO}/issues/new?title=${title}&body=${body}`;
+}
+
 export const metadata: Metadata = pageMetadata({
   title: "Contact Majestic Rentals",
   description:
-    "Contact Majestic Rentals for chauffeur-driven car rentals in Nepal. Chat on WhatsApp, call, or email for availability and a written quotation.",
+    "Contact Majestic Rentals for chauffeur-driven car rentals in Nepal. Send an inquiry via GitHub, call, or email for availability and a written quotation.",
   path: "/contact",
 });
 
 export default function ContactPage() {
   const phone = phoneHref();
-  const whatsapp = whatsappHref();
   const email = emailHref();
 
   const contactPageSchema = {
@@ -40,22 +77,25 @@ export default function ContactPage() {
     about: { "@id": `${siteConfig.url}/#organization` },
   };
 
+  const githubIssueUrl = buildGitHubIssueUrl({});
 
   return (
     <>
       <PageHero
         eyebrow="Contact"
         title="Tell us where you need to go."
-        description="Chat with us on WhatsApp, call, or email. Share your dates, pickup point, destination, passengers and luggage, and we will confirm availability and a written quotation."
+        description="Send an inquiry via GitHub, call, or email. Share your dates, pickup point, destination, passengers and luggage, and we will confirm availability and a written quotation."
         crumbs={[{ label: "Contact" }]}
         actions={
           <>
-            {whatsapp ? (
-              <ButtonLink href={whatsapp} variant="gold" size="lg">
-                <MessageCircle className="h-4 w-4" aria-hidden="true" />
-                Chat on WhatsApp
-              </ButtonLink>
-            ) : null}
+            <ButtonLink
+              href={githubIssueUrl}
+              variant="gold"
+              size="lg"
+            >
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              Send Inquiry on GitHub
+            </ButtonLink>
             {phone ? (
               <ButtonLink href={phone} variant="light" size="lg">
                 <Phone className="h-4 w-4" aria-hidden="true" />
@@ -71,27 +111,26 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-start">
             <div>
               <SectionHeading
-                eyebrow="WhatsApp"
-                title="Send us a message on WhatsApp."
-                description="Tap the button below to open a WhatsApp chat with our team. Share your travel dates, pickup point, destination, passenger count and luggage so we can check availability and send a quotation."
+                eyebrow="Send Inquiry"
+                title="Send your inquiry on GitHub."
+                description="Tap the button below to open a new GitHub issue with your rental inquiry details. We will check availability and reply with a written quotation."
               />
-              {whatsapp ? (
-                <div className="mt-8 flex flex-col gap-3">
-                  <ButtonLink
-                    href={whatsapp}
-                    variant="gold"
-                    size="lg"
-                    className="w-full sm:w-auto"
-                  >
-                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
-                    Open WhatsApp Chat
-                  </ButtonLink>
-                  <p className="text-xs leading-5 text-slate-500">
-                    Pre-filled message ready to send. You can edit it before
-                    sending.
-                  </p>
-                </div>
-              ) : null}
+              <div className="mt-8 flex flex-col gap-3">
+                <ButtonLink
+                  href={githubIssueUrl}
+                  variant="gold"
+                  size="lg"
+                  className="w-full sm:w-auto"
+                >
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  Open New Inquiry Issue
+                </ButtonLink>
+                <p className="text-xs leading-5 text-slate-500">
+                  The issue template is pre-filled with inquiry fields. Add your
+                  travel dates, pickup point, destination, passenger count and
+                  luggage, then submit.
+                </p>
+              </div>
 
               <div className="mt-12 rounded-3xl border border-navy-100 bg-white p-5 shadow-card sm:p-8">
                 <SectionHeading
@@ -126,11 +165,11 @@ export default function ContactPage() {
             <aside className="space-y-6 lg:sticky lg:top-28">
               <div className="rounded-3xl border border-navy-100 bg-navy-50/70 p-6 sm:p-7">
                 <h2 className="text-lg font-bold text-navy-950">
-                  Speak to our team
+                  Contact our team
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
                   Direct contact details are published when they are verified.
-                  WhatsApp is available now.
+                  GitHub inquiry is available now.
                 </p>
 
                 <div className="mt-5 space-y-3 text-sm">
@@ -146,20 +185,6 @@ export default function ContactPage() {
                       {siteConfig.contact.phone}
                     </a>
                   ) : null}
-                  {whatsapp ? (
-                    <a
-                      href={whatsapp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 rounded-xl border border-navy-200 bg-white px-4 py-3 font-semibold text-navy-950 transition-colors hover:border-navy-950"
-                    >
-                      <MessageCircle
-                        className="h-4 w-4 text-gold-700"
-                        aria-hidden="true"
-                      />
-                      WhatsApp inquiry
-                    </a>
-                  ) : null}
                   {email ? (
                     <a
                       href={email}
@@ -172,6 +197,18 @@ export default function ContactPage() {
                       {siteConfig.contact.email}
                     </a>
                   ) : null}
+                  <a
+                    href={githubIssueUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 rounded-xl border border-navy-200 bg-white px-4 py-3 font-semibold text-navy-950 transition-colors hover:border-navy-950"
+                  >
+                    <ArrowRight
+                      className="h-4 w-4 text-gold-700"
+                      aria-hidden="true"
+                    />
+                    Send Inquiry on GitHub
+                  </a>
                   <div className="flex items-start gap-3 rounded-xl border border-navy-200 bg-white px-4 py-3">
                     <MapPin
                       className="mt-0.5 h-4 w-4 shrink-0 text-gold-700"
@@ -207,9 +244,9 @@ export default function ContactPage() {
                 {!hasPublicContactDetails() ? (
                   <div className="mt-5">
                     <Notice title="Contact details being verified">
-                      The phone, WhatsApp, email and full address are not
-                      published yet. WhatsApp chat is available now; direct
-                      contact links will appear here once verified.
+                      The phone, email and full address are not published yet.
+                      GitHub inquiry is available now; direct contact links will
+                      appear here once verified.
                     </Notice>
                   </div>
                 ) : null}
@@ -233,7 +270,7 @@ export default function ContactPage() {
                 </h2>
                 <ol className="mt-5 space-y-4">
                   {[
-                    "Send us your dates, route and group details on WhatsApp.",
+                    "Send us your dates, route and group details via GitHub issue.",
                     "We check vehicle and driver availability for your route.",
                     "You receive a written quotation with the vehicle category, inclusions and price.",
                     "Confirm in writing, and your journey is arranged.",
@@ -307,8 +344,8 @@ export default function ContactPage() {
                 Is a message a confirmed booking?
               </h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                No. Starting a chat starts the process. Availability and terms
-                are confirmed in writing before anything is finalised.
+                No. Submitting an inquiry starts the process. Availability and
+                terms are confirmed in writing before anything is finalised.
               </p>
             </div>
           </div>
@@ -316,40 +353,36 @@ export default function ContactPage() {
       </section>
 
       <JsonLd
-        data={[
-          contactPageSchema,
-          howToSchema({
-            name: "How to contact Majestic Rentals",
-            description:
-              "Chat on WhatsApp, call, or email to check availability and receive a written quotation.",
-            steps: [
-              {
-                title: "Send a message",
-                text:
-                  "Open WhatsApp chat and share your travel dates, pickup point, destination and group details.",
-              },
-              {
-                title: "We check availability",
-                text:
-                  "Our team reviews your route and vehicle options for your dates and confirms what can be arranged.",
-              },
-              {
-                title: "Receive a quotation",
-                text:
-                  "You get a written quotation with the vehicle category, inclusions and price before anything is confirmed.",
-              },
-              {
-                title: "Confirm your journey",
-                text:
-                  "Accept the quotation in writing and we confirm the arrangement with you.",
-              },
-            ],
-          }),
-          breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name: "Contact", path: "/contact" },
-          ]),
-        ]}
+        data={[contactPageSchema, howToSchema({
+          name: "How to contact Majestic Rentals",
+          description:
+            "Send an inquiry via GitHub, call, or email to check availability and receive a written quotation.",
+          steps: [
+            {
+              title: "Open a GitHub issue",
+              text:
+                "Click 'Send Inquiry on GitHub' to open a new issue with your travel dates, pickup point, destination and group details pre-filled.",
+            },
+            {
+              title: "We check availability",
+              text:
+                "Our team reviews your route and vehicle options for your dates and confirms what can be arranged.",
+            },
+            {
+              title: "Receive a quotation",
+              text:
+                "You get a written quotation with the vehicle category, inclusions and price before anything is confirmed.",
+            },
+            {
+              title: "Confirm your journey",
+              text:
+                "Accept the quotation in writing and we confirm the arrangement with you.",
+            },
+          ],
+        }), breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ])]}
       />
     </>
   );
