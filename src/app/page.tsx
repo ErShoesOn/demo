@@ -29,8 +29,10 @@ import { tourPackages } from "@/data/packages";
 import { services } from "@/data/services";
 import { siteConfig } from "@/data/site";
 import { vehicleCategories } from "@/data/vehicles";
-import { faqSchema } from "@/lib/schema";
-import { pageMetadata } from "@/lib/seo";
+import {
+  faqSchema,
+  howToSchema,
+} from "@/lib/schema";import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Majestic Rentals | Chauffeur-Driven Car Rentals in Nepal",
@@ -511,7 +513,38 @@ export default function HomePage() {
       </section>
 
       <CtaBand />
-      <JsonLd data={faqSchema(homepageFaqs)} />
+      <JsonLd
+        data={[
+          howToSchema({
+            name: "How to arrange a chauffeur-driven car rental in Nepal",
+            description:
+              "Send your travel details, receive a written quotation, and confirm your journey with Majestic Rentals.",
+            steps: [
+              {
+                title: "Send your inquiry",
+                text:
+                  "Share your dates, pickup point, destination, passenger count and luggage using the inquiry form.",
+              },
+              {
+                title: "We check availability",
+                text:
+                  "Our team reviews your route and vehicle options for your dates and confirms what can be arranged.",
+              },
+              {
+                title: "Receive a quotation",
+                text:
+                  "You get a written quotation with the vehicle category, inclusions and price before anything is confirmed.",
+              },
+              {
+                title: "Confirm your journey",
+                text:
+                  "Accept the quotation in writing and we confirm the arrangement with you.",
+              },
+            ],
+          }),
+          faqSchema(homepageFaqs),
+        ]}
+      />
     </>
   );
 }

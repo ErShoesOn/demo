@@ -1,13 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import { LocaleShell } from "@/components/locale-shell";
 import { FloatingContact } from "@/components/floating-contact";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { siteConfig } from "@/data/site";
 import { indexingAllowed } from "@/lib/seo";
-import { organizationSchema, websiteSchema } from "@/lib/schema";
+import { defaultLocale } from "@/lib/i18n";
+import { localBusinessSchema, organizationSchema, websiteSchema } from "@/lib/schema";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -63,6 +65,9 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: "/favicon.ico" }],
   },
+  other: {
+    "content-language": defaultLocale,
+  },
 };
 
 export const viewport: Viewport = {
@@ -72,9 +77,13 @@ export const viewport: Viewport = {
   colorScheme: "light",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={`${manrope.variable} h-full`}>
+    <html lang={defaultLocale} className={`${manrope.variable} h-full`}>
       <body className="flex min-h-dvh flex-col bg-white text-navy-950">
         <a
           href="#main-content"
@@ -84,11 +93,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         <SiteHeader />
         <main id="main-content" className="flex-1">
-          {children}
+          <LocaleShell>{children}</LocaleShell>
         </main>
         <SiteFooter />
         <FloatingContact />
-        <JsonLd data={[organizationSchema(), websiteSchema()]} />
+        <JsonLd
+          data={[organizationSchema(), localBusinessSchema(), websiteSchema()]}
+        />
       </body>
     </html>
   );

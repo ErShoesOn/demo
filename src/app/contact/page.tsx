@@ -24,7 +24,10 @@ import {
   whatsappHref,
 } from "@/data/site";
 import { vehicleCategories } from "@/data/vehicles";
-import { breadcrumbSchema } from "@/lib/schema";
+import {
+  breadcrumbSchema,
+  howToSchema,
+} from "@/lib/schema";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -261,9 +264,76 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <section className="border-y border-navy-100 bg-navy-50/60 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="Quick answers"
+            title="Common questions about renting a car in Nepal."
+            description="Direct answers to the questions travellers ask most often. If yours is not here, send it with your inquiry."
+          />
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-2xl border border-navy-100 bg-white p-5">
+              <h3 className="text-sm font-bold text-navy-950">
+                Is a driver always included?
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Yes. Majestic Rentals is chauffeur-driven only. We do not offer
+                self-drive rentals.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-navy-100 bg-white p-5">
+              <h3 className="text-sm font-bold text-navy-950">
+                How is the price decided?
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                We provide a written quotation based on vehicle category, route,
+                duration and waiting time. The price is confirmed before your
+                trip.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-navy-100 bg-white p-5">
+              <h3 className="text-sm font-bold text-navy-950">
+                Is a request a confirmed booking?
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                No. Submitting the inquiry starts the process. Availability and
+                terms are confirmed in writing before anything is finalised.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <JsonLd
         data={[
           contactPageSchema,
+          howToSchema({
+            name: "How to book a chauffeur-driven rental with Majestic Rentals",
+            description:
+              "Send your travel details, receive a written quotation, and confirm your journey in writing.",
+            steps: [
+              {
+                title: "Send your inquiry",
+                text:
+                  "Share your dates, pickup point, destination, passenger count and luggage using the inquiry form.",
+              },
+              {
+                title: "We check availability",
+                text:
+                  "Our team reviews your route and vehicle options for your dates and confirms what can be arranged.",
+              },
+              {
+                title: "Receive a quotation",
+                text:
+                  "You get a written quotation with the vehicle category, inclusions and price before anything is confirmed.",
+              },
+              {
+                title: "Confirm your journey",
+                text:
+                  "Accept the quotation in writing and we confirm the arrangement with you.",
+              },
+            ],
+          }),
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "Contact", path: "/contact" },

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -11,6 +12,7 @@ import {
   X,
 } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
+import { LocaleSwitcherCompact } from "@/components/locale-switcher";
 import {
   mainNav,
   phoneHref,
@@ -67,6 +69,7 @@ export function SiteHeader() {
                 Inquiry-led · Availability confirmed before booking
               </span>
             )}
+            <LocaleSwitcherCompact />
             <Link
               href="/contact"
               className="inline-flex items-center gap-1 text-gold-300 transition-colors hover:text-gold-200"
@@ -82,15 +85,16 @@ export function SiteHeader() {
         <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
           <Link
             href="/"
-            className="group flex shrink-0 flex-col justify-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-4"
+            className="group flex shrink-0 items-center justify-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-4"
             aria-label="Majestic Rentals — home"
           >
-            <span className="text-[1.02rem] font-extrabold leading-none tracking-[0.18em] text-navy-950">
-              MAJESTIC
-            </span>
-            <span className="mt-1 text-[0.58rem] font-bold leading-none tracking-[0.42em] text-gold-600">
-              RENTALS
-            </span>
+            <Image
+              src="/images/logo.svg"
+              alt="Majestic Rentals — premium chauffeur-driven car rentals in Nepal"
+              width={120}
+              height={38}
+              className="block"
+            />
           </Link>
 
           <nav

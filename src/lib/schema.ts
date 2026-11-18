@@ -19,7 +19,7 @@ export function organizationSchema() {
 
   const hasContact = Boolean(siteConfig.contact.phone || siteConfig.contact.email);
 
-  return {
+  const base: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${siteConfig.url}/#organization`,
@@ -42,6 +42,65 @@ export function organizationSchema() {
             addressCountry: "NP",
           },
         }
+      : {}),
+    ...(siteConfig.contact.mapsUrl ? { sameAs: [siteConfig.contact.mapsUrl] } : {}),
+    ...(siteConfig.contact.phone ? { telephone: siteConfig.contact.phone } : {}),
+    ...(siteConfig.contact.email ? { email: siteConfig.contact.email } : {}),
+  };
+
+  return base;
+}
+
+export function localBusinessSchema() {
+  const contactPoint: Record<string, string> = {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    areaServed: "NP",
+    availableLanguage: "en",
+  };
+
+  if (siteConfig.contact.phone) contactPoint.telephone = siteConfig.contact.phone;
+  if (siteConfig.contact.email) contactPoint.email = siteConfig.contact.email;
+
+  const geo = siteConfig.contact.mapsUrl
+    ? {
+        "@type": "GeoCoordinates",
+      }
+    : {};
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${siteConfig.url}/#localbusiness`,
+    name: siteConfig.name,
+    legalName: siteConfig.legalName,
+    url: siteConfig.url,
+    description: siteConfig.description,
+    image: `${siteConfig.url}/images/logo.svg`,
+    telephone: siteConfig.contact.phone || undefined,
+    email: siteConfig.contact.email || undefined,
+    address: siteConfig.contact.address
+      ? {
+          "@type": "PostalAddress",
+          streetAddress: siteConfig.contact.address,
+          addressLocality: "Kathmandu",
+          addressRegion: "Bagmati Province",
+          postalCode: "",
+          addressCountry: "NP",
+        }
+      : undefined,
+    areaServed: {
+      "@type": "Country",
+      name: "Nepal",
+    },
+    knowsLanguage: ["en", "ne"],
+    ...(siteConfig.contact.mapsUrl ? { hasMap: siteConfig.contact.mapsUrl } : {}),
+    ...(siteConfig.contact.mapsUrl ? { geo } : {}),
+    ...(siteConfig.contact.hours ? { openingHours: siteConfig.contact.hours } : {}),
+    priceRange: "$$",
+    servesCuisine: undefined,
+    ...(siteConfig.contact.phone || siteConfig.contact.email
+      ? { contactPoint: [contactPoint] }
       : {}),
   };
 }
@@ -214,6 +273,30 @@ export function faqSchema(items: { question: string; answer: string }[]) {
         "@type": "Answer",
         text: item.answer,
       },
+    })),
+  };
+}
+
+export function howToSchema({
+  name,
+  description,
+  steps,
+}: {
+  name: string;
+  description: string;
+  steps: { title: string; text: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    url: siteConfig.url,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.title,
+      text: step.text,
     })),
   };
 }
