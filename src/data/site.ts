@@ -49,14 +49,17 @@ export const siteConfig: SiteConfig = {
   locale: "en_NP",
   hub: "Kathmandu, Nepal",
   contact: {
-    phone: "",
+    phone: "+977 9801085455",
     whatsapp: "9779801085455",
-    email: "",
+    email: "majesticrentalsnp@gmail.com",
     address: "",
     mapsUrl: "",
     hours: "",
   },
-  social: [],
+  social: [
+    { label: "Google", href: "https://share.google/75TOP5BCysHz0GBxD" },
+    { label: "Facebook", href: "https://www.facebook.com/MajesticRentalsNepal" },
+  ],
   allowIndexing: true,
 };
 

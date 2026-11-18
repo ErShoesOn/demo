@@ -105,7 +105,7 @@ export default function ContactPage() {
             <div>
               <SectionHeading
                 eyebrow="WhatsApp"
-                title="Send your inquiry on WhatsApp."
+                title="Send your inquiry on WhatsApp or call +977 9801085455."
                 description="Tap the button below to open a WhatsApp chat with our team. Your inquiry details will be pre-filled — just add your travel dates, pickup point, destination, passenger count and luggage, then send."
               />
               <div className="mt-8 flex flex-col gap-3">
@@ -253,6 +253,32 @@ export default function ContactPage() {
                     Open location in Google Maps
                     <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
                   </a>
+                ) : null}
+
+                {siteConfig.social.length > 0 ? (
+                  <div className="mt-6">
+                    <h3 className="text-xs font-bold uppercase tracking-[0.16em] text-navy-500 mb-3">
+                      Follow us
+                    </h3>
+                    <div className="flex gap-3">
+                      {siteConfig.social.map((social) => (
+                        <a
+                          key={social.label}
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-xl border border-navy-200 bg-white px-4 py-3 font-semibold text-navy-950 transition-colors hover:border-navy-950 hover:text-gold-700"
+                        >
+                          {social.label === "Google" ? (
+                            <span className="text-gold-700">G</span>
+                          ) : (
+                            <span className="text-[#1877f2]">f</span>
+                          )}
+                          {social.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                 ) : null}
               </div>
 
