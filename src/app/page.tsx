@@ -5,9 +5,6 @@ import {
   ArrowRight,
   ArrowUpRight,
   CheckCircle2,
-  FileText,
-  MapPin,
-  ShieldCheck,
 } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
 import {
@@ -43,17 +40,23 @@ export const metadata: Metadata = pageMetadata({
 
 const pillars = [
   {
-    icon: ShieldCheck,
+    image: "https://images.unsplash.com/photo-1529273676803-412f248c8a2a?q=80&w=400&auto=format&fit=crop",
+    imageAlt: "Professional chauffeur driving a luxury car through Kathmandu streets, Nepal",
+    imageCaption: "Chauffeur-driven car service in Kathmandu, Nepal. Photo: Unsplash.",
     title: "Chauffeur-driven only",
     text: "Every vehicle is arranged with a driver. We do not offer self-drive rentals.",
   },
   {
-    icon: FileText,
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=400&auto=format&fit=crop",
+    imageAlt: "Written quotation document with pen on desk, professional car rental paperwork",
+    imageCaption: "Written quotation with clear terms. Photo: Unsplash.",
     title: "A written quotation",
     text: "You receive the route, vehicle category, inclusions and price before anything is confirmed.",
   },
   {
-    icon: MapPin,
+    image: "https://images.unsplash.com/photo-1469843592276-4b02ed61dd4e?q=80&w=400&auto=format&fit=crop",
+    imageAlt: "Kathmandu valley landscape with mountains and temples, Nepal travel destination",
+    imageCaption: "Kathmandu and beyond — intercity travel across Nepal. Photo: Unsplash.",
     title: "Kathmandu and beyond",
     text: "City travel, airport transfers and selected intercity journeys across Nepal on request.",
   },
@@ -192,16 +195,24 @@ export default function HomePage() {
               />
               <div className="mt-9 grid gap-5 sm:grid-cols-3">
                 {pillars.map((pillar) => {
-                  const Icon = pillar.icon;
                   return (
                     <div
                       key={pillar.title}
                       className="rounded-2xl border border-navy-100 bg-white p-5"
                     >
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-navy-50 text-navy-900">
-                        <Icon className="h-5 w-5" aria-hidden="true" />
-                      </span>
-                      <h2 className="mt-4 text-sm font-bold text-navy-950">
+                      <figure className="relative aspect-[4/3] overflow-hidden rounded-xl border border-navy-100 mb-4">
+                        <Image
+                          src={pillar.image}
+                          alt={pillar.imageAlt}
+                          fill
+                          sizes="(min-width: 1024px) 28vw, 100vw"
+                          className="object-cover"
+                        />
+                        <figcaption className="absolute bottom-0 left-0 right-0 p-2 bg-black/60 text-[10px] leading-4 text-white text-center">
+                          {pillar.imageCaption}
+                        </figcaption>
+                      </figure>
+                      <h2 className="text-sm font-bold text-navy-950">
                         {pillar.title}
                       </h2>
                       <p className="mt-2 text-sm leading-6 text-slate-600">

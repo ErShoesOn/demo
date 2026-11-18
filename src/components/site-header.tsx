@@ -50,32 +50,32 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="hidden bg-navy-950 text-white sm:block">
-        <div className="mx-auto flex h-9 max-w-7xl items-center justify-between gap-4 px-5 text-[11px] font-medium tracking-wide sm:px-8">
-          <p className="text-navy-100/80">
+      <div className="bg-navy-950 text-white">
+        <div className="mx-auto flex h-9 max-w-7xl items-center justify-between gap-3 px-4 text-[10px] font-medium tracking-wide sm:px-6 sm:text-[11px] sm:gap-4">
+          <p className="text-navy-100/80 truncate sm:truncate-none">
             Kathmandu-based · Chauffeur-driven rentals across Nepal
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4 flex-wrap sm:flex-nowrap">
             {phone ? (
               <a
                 href={phone}
-                className="inline-flex items-center gap-1.5 text-navy-100 transition-colors hover:text-white"
+                className="inline-flex items-center gap-1 sm:gap-1.5 text-navy-100 transition-colors hover:text-white whitespace-nowrap"
               >
-                <Phone className="h-3 w-3" aria-hidden="true" />
+                <Phone className="h-3 w-3 sm:h-4 sm:w-4" aria-hidden="true" />
                 {siteConfig.contact.phone}
               </a>
             ) : (
-              <span className="text-navy-200/70">
+              <span className="text-navy-200/70 whitespace-nowrap">
                 Inquiry-led · Availability confirmed before booking
               </span>
             )}
             <LocaleSwitcherCompact />
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1 text-gold-300 transition-colors hover:text-gold-200"
+              className="inline-flex items-center gap-1 sm:gap-1 text-gold-300 transition-colors hover:text-gold-200 whitespace-nowrap"
             >
               Get a quote
-              <ArrowRight className="h-3 w-3" aria-hidden="true" />
+              <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4" aria-hidden="true" />
             </Link>
           </div>
         </div>
