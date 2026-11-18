@@ -24,7 +24,10 @@ import { destinations } from "@/data/destinations";
 import { homepageFaqs } from "@/data/faqs";
 import { tourPackages } from "@/data/packages";
 import { services } from "@/data/services";
-import { siteConfig } from "@/data/site";
+import {
+  siteConfig,
+  whatsappHref,
+} from "@/data/site";
 import { vehicleCategories } from "@/data/vehicles";
 import {
   faqSchema,
@@ -89,6 +92,8 @@ const steps = [
   },
 ];
 
+const whatsappUrl = whatsappHref() ?? "https://wa.me/9779801085455";
+
 export default function HomePage() {
   return (
     <>
@@ -134,21 +139,13 @@ export default function HomePage() {
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <ButtonLink
-                href="/contact#inquiry"
+                href={whatsappUrl}
                 variant="gold"
                 size="lg"
-                className="animate-rise-delay"
+                className="animate-rise-delay bg-[#1f9d55] text-white hover:bg-[#188247]"
               >
-                Book Now
+                Book Now on WhatsApp
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </ButtonLink>
-              <ButtonLink
-                href="/contact#inquiry"
-                variant="light"
-                size="lg"
-                className="animate-rise-delay"
-              >
-                Get a Quote
               </ButtonLink>
             </div>
             <p className="mt-4 text-xs leading-5 text-navy-200">
