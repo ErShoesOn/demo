@@ -1,21 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import {
-  ArrowRight,
-  Clock,
-  Mail,
-  MapPin,
-  MessageCircle,
-  Phone,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowRight, Clock, Mail, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
-import { InquiryForm } from "@/components/inquiry-form";
 import { JsonLd } from "@/components/json-ld";
 import { Notice } from "@/components/notice";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
-import { services } from "@/data/services";
 import {
   emailHref,
   hasPublicContactDetails,
@@ -23,7 +12,6 @@ import {
   siteConfig,
   whatsappHref,
 } from "@/data/site";
-import { vehicleCategories } from "@/data/vehicles";
 import {
   breadcrumbSchema,
   howToSchema,
@@ -33,23 +21,9 @@ import { absoluteUrl, pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Contact Majestic Rentals",
   description:
-    "Send a rental inquiry to Majestic Rentals. Share your dates, pickup point, destination, passengers and luggage, and our team will confirm availability and a quotation.",
+    "Contact Majestic Rentals for chauffeur-driven car rentals in Nepal. Chat on WhatsApp, call, or email for availability and a written quotation.",
   path: "/contact",
 });
-
-const serviceOptions = [
-  ...services.map((service) => ({
-    value: service.name,
-    label: service.navLabel,
-  })),
-  { value: "Custom tour package", label: "Custom tour package" },
-  { value: "Other / not sure", label: "Other / not sure" },
-];
-
-const vehicleOptions = vehicleCategories.map((category) => ({
-  value: category.name,
-  label: category.name,
-}));
 
 export default function ContactPage() {
   const phone = phoneHref();
@@ -62,27 +36,30 @@ export default function ContactPage() {
     name: "Contact Majestic Rentals",
     url: absoluteUrl("/contact"),
     description:
-      "Inquiry form and contact information for Majestic Rentals, a chauffeur-driven car rental service based in Kathmandu, Nepal.",
+      "Contact information for Majestic Rentals, a chauffeur-driven car rental service based in Kathmandu, Nepal.",
     about: { "@id": `${siteConfig.url}/#organization` },
   };
+
 
   return (
     <>
       <PageHero
         eyebrow="Contact"
         title="Tell us where you need to go."
-        description="Send your dates, pickup point, destination, passengers and luggage. We will check availability and reply with a clear written quotation. A submitted inquiry is a request, not a confirmed booking."
+        description="Chat with us on WhatsApp, call, or email. Share your dates, pickup point, destination, passengers and luggage, and we will confirm availability and a written quotation."
         crumbs={[{ label: "Contact" }]}
         actions={
           <>
-            <ButtonLink href="#inquiry" variant="gold" size="lg">
-              Send an inquiry
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </ButtonLink>
             {whatsapp ? (
-              <ButtonLink href={whatsapp} variant="light" size="lg">
+              <ButtonLink href={whatsapp} variant="gold" size="lg">
                 <MessageCircle className="h-4 w-4" aria-hidden="true" />
                 Chat on WhatsApp
+              </ButtonLink>
+            ) : null}
+            {phone ? (
+              <ButtonLink href={phone} variant="light" size="lg">
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                Call Us
               </ButtonLink>
             ) : null}
           </>
@@ -94,15 +71,55 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-start">
             <div>
               <SectionHeading
-                eyebrow="Inquiry form"
-                title="Send the details. We will check availability."
-                description="The more context you share, the more useful our reply can be. If your plans are still flexible, tell us what you know and we will suggest a realistic option."
+                eyebrow="WhatsApp"
+                title="Send us a message on WhatsApp."
+                description="Tap the button below to open a WhatsApp chat with our team. Share your travel dates, pickup point, destination, passenger count and luggage so we can check availability and send a quotation."
               />
-              <div className="mt-8 rounded-3xl border border-navy-100 bg-white p-5 shadow-card sm:p-8">
-                <InquiryForm
-                  serviceOptions={serviceOptions}
-                  vehicleOptions={vehicleOptions}
+              {whatsapp ? (
+                <div className="mt-8 flex flex-col gap-3">
+                  <ButtonLink
+                    href={whatsapp}
+                    variant="gold"
+                    size="lg"
+                    className="w-full sm:w-auto"
+                  >
+                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                    Open WhatsApp Chat
+                  </ButtonLink>
+                  <p className="text-xs leading-5 text-slate-500">
+                    Pre-filled message ready to send. You can edit it before
+                    sending.
+                  </p>
+                </div>
+              ) : null}
+
+              <div className="mt-12 rounded-3xl border border-navy-100 bg-white p-5 shadow-card sm:p-8">
+                <SectionHeading
+                  eyebrow="What to share"
+                  title="Details that help us reply faster."
+                  description=""
+                  align="left"
                 />
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {[
+                    "Travel date(s)",
+                    "Pickup location (hotel, home, airport)",
+                    "Destination",
+                    "Number of passengers",
+                    "Luggage count and sizes",
+                    "Any special requirements",
+                  ].map((item, index) => (
+                    <div
+                      key={item}
+                      className="flex items-start gap-2 text-sm leading-6 text-slate-600"
+                    >
+                      <span className="shrink-0 text-gold-700">
+                        {index + 1}.
+                      </span>
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -113,7 +130,7 @@ export default function ContactPage() {
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
                   Direct contact details are published when they are verified.
-                  You can also use the inquiry form for any question.
+                  WhatsApp is available now.
                 </p>
 
                 <div className="mt-5 space-y-3 text-sm">
@@ -191,7 +208,7 @@ export default function ContactPage() {
                   <div className="mt-5">
                     <Notice title="Contact details being verified">
                       The phone, WhatsApp, email and full address are not
-                      published yet. The inquiry form is available now; direct
+                      published yet. WhatsApp chat is available now; direct
                       contact links will appear here once verified.
                     </Notice>
                   </div>
@@ -216,9 +233,10 @@ export default function ContactPage() {
                 </h2>
                 <ol className="mt-5 space-y-4">
                   {[
-                    "We review your dates, route, passenger count and luggage.",
-                    "We reply with availability, a recommended vehicle category and a written quotation.",
-                    "Your journey is confirmed only after you accept the quotation and we confirm the arrangement in writing.",
+                    "Send us your dates, route and group details on WhatsApp.",
+                    "We check vehicle and driver availability for your route.",
+                    "You receive a written quotation with the vehicle category, inclusions and price.",
+                    "Confirm in writing, and your journey is arranged.",
                   ].map((item, index) => (
                     <li key={item} className="flex gap-3 text-sm leading-6">
                       <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-950 text-[11px] font-bold text-white">
@@ -229,9 +247,9 @@ export default function ContactPage() {
                   ))}
                 </ol>
                 <p className="mt-5 border-t border-navy-100 pt-4 text-xs leading-5 text-slate-500">
-                  Submitting the form does not reserve a vehicle, driver or
-                  price. Please do not send payment until you have an accepted
-                  quotation and written confirmation.
+                  A message is a request, not a confirmed booking. Availability
+                  and terms are confirmed in writing before anything is
+                  finalised.
                 </p>
               </div>
 
@@ -243,18 +261,11 @@ export default function ContactPage() {
                   />
                   <div>
                     <h2 className="text-sm font-bold text-navy-950">
-                      Your information
+                      Chauffeur-driven only
                     </h2>
                     <p className="mt-1.5 text-sm leading-6 text-slate-600">
-                      We collect only the details needed to respond to your
-                      inquiry. Read our{" "}
-                      <Link
-                        href="/privacy-policy"
-                        className="font-semibold text-navy-900 underline decoration-gold-400 decoration-2 underline-offset-2"
-                      >
-                        privacy policy
-                      </Link>{" "}
-                      for how information is handled.
+                      Every Majestic Rentals vehicle is provided with a driver.
+                      We do not offer self-drive rentals.
                     </p>
                   </div>
                 </div>
@@ -269,7 +280,7 @@ export default function ContactPage() {
           <SectionHeading
             eyebrow="Quick answers"
             title="Common questions about renting a car in Nepal."
-            description="Direct answers to the questions travellers ask most often. If yours is not here, send it with your inquiry."
+            description="Direct answers to the questions travellers ask most often."
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-2xl border border-navy-100 bg-white p-5">
@@ -293,11 +304,11 @@ export default function ContactPage() {
             </div>
             <div className="rounded-2xl border border-navy-100 bg-white p-5">
               <h3 className="text-sm font-bold text-navy-950">
-                Is a request a confirmed booking?
+                Is a message a confirmed booking?
               </h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                No. Submitting the inquiry starts the process. Availability and
-                terms are confirmed in writing before anything is finalised.
+                No. Starting a chat starts the process. Availability and terms
+                are confirmed in writing before anything is finalised.
               </p>
             </div>
           </div>
@@ -308,14 +319,14 @@ export default function ContactPage() {
         data={[
           contactPageSchema,
           howToSchema({
-            name: "How to book a chauffeur-driven rental with Majestic Rentals",
+            name: "How to contact Majestic Rentals",
             description:
-              "Send your travel details, receive a written quotation, and confirm your journey in writing.",
+              "Chat on WhatsApp, call, or email to check availability and receive a written quotation.",
             steps: [
               {
-                title: "Send your inquiry",
+                title: "Send a message",
                 text:
-                  "Share your dates, pickup point, destination, passenger count and luggage using the inquiry form.",
+                  "Open WhatsApp chat and share your travel dates, pickup point, destination and group details.",
               },
               {
                 title: "We check availability",
