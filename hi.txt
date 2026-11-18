@@ -1,0 +1,29 @@
+
+
+majesticrentals.com.np
+CNAME
+32b75c83282484de.vercel-dns-017.com
+DNS only
+Auto
+—
+—
+—
+
+www.majesticrentals.com.np
+CNAME
+32b75c83282484de.vercel-dns-017.com
+DNS only
+Auto
+—
+—
+—
+
+majesticrentals.com.np
+TXT
+"google-site-verification=lg-4AfZ0yWQTRWzChkwErnkJIcqmticfdvuoID1Kkmc"
+DNS only
+1 hrS
+—
+—
+—
+Showing 1-3 of 3
