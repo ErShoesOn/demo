@@ -156,7 +156,7 @@ export default function HomePage() {
 
           <div className="mt-10 grid overflow-hidden rounded-2xl border border-white/10 bg-navy-950/55 backdrop-blur-sm sm:grid-cols-3 sm:divide-x sm:divide-white/10">
             {[
-              ["professionally included", "No self-drive option"],
+              ["Driver included", "No self-drive option"],
               ["Clear quotations", "Inclusions stated in writing"],
               ["Nationwide on request", "Kathmandu-based team"],
             ].map(([title, text]) => (
