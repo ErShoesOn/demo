@@ -50,7 +50,7 @@ export const siteConfig: SiteConfig = {
   hub: "Kathmandu, Nepal",
   contact: {
     phone: "",
-    whatsapp: "",
+    whatsapp: "9779801085455",
     email: "",
     address: "",
     mapsUrl: "",
